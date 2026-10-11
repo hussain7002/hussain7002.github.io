@@ -6,6 +6,10 @@ date: 2026-10-11
 minutes: 7
 featured: false
 draft: false
+image: "/img/writing/dpdp-and-health-ai.webp"
+imageAlt: "Timeline from November 2025 to May 2027 showing when DPDP Rules provisions apply"
+caption: "The DPDP Rules start in phases. Most obligations on organisations apply from around May 2027."
+credit: "Diagram: Hussain MS · source: DPDP Rules, 2025"
 ---
 
 I co-authored a paper by Deloitte India and the Confederation of Indian Industry on data governance under the Digital Personal Data Protection (DPDP) Act, 2023 and the DPDP Rules, 2025. That paper was about organisations in general. This piece is narrower and more personal: what the law means for people building, buying or deploying AI in health in India.

@@ -6,6 +6,10 @@ date: 2026-10-11
 minutes: 6
 featured: false
 draft: false
+image: "/img/writing/health-facility-in-fhir.webp"
+imageAlt: "Diagram of a FHIR Location resource linked to an Organization resource"
+caption: "One facility as two FHIR resources: the place (Location) and the institution (Organization), linked by a reference."
+credit: "Diagram: Hussain MS · illustrative facility"
 ---
 
 FHIR (pronounced "fire") is the standard most new health information systems now use to exchange data, including India's own ABDM, whose health records are built on FHIR profiles. It is mentioned in almost every digital health strategy. It is understood by far fewer people than mention it.

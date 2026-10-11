@@ -6,6 +6,11 @@ date: 2026-10-11
 minutes: 9
 featured: true
 draft: false
+image: "/img/writing/maternal-risk-model-validation.webp"
+imageAlt: "Bar charts comparing accuracy and sensitivity under a leaky random split and an honest deduplicated test, and sensitivity by age group"
+caption: "The same random forest scores 96% accuracy on a random split that leaks duplicate rows, and 88% when tested honestly. Sensitivity falls to 45% for women under 20."
+credit: "Chart: Hussain MS · data: UCI Maternal Health Risk dataset"
+creditUrl: "https://archive.ics.uci.edu/dataset/863/maternal+health+risk"
 ---
 
 Search for "maternal health risk prediction" and you will find dozens of notebooks and papers reporting accuracy above 95% on the same public dataset. It is a natural test case: maternal deaths are mostly preventable, risk assessment in pregnancy is often done badly, and a model that flags high-risk women early could save lives.

@@ -37,6 +37,12 @@ const writing = defineCollection({
     minutes: z.number(),
     featured: z.boolean().default(false),
     draft: z.boolean().default(false),
+    // Lead image shown under the title: a chart, diagram or openly licensed photo, always captioned and credited.
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
+    caption: z.string().optional(),
+    credit: z.string().optional(),
+    creditUrl: z.string().optional(),
   }),
 });
 

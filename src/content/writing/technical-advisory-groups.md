@@ -6,6 +6,10 @@ date: 2026-10-11
 minutes: 7
 featured: false
 draft: false
+image: "/img/writing/technical-advisory-groups.webp"
+imageAlt: "Cycle diagram of five steps from a ministry question to tracked follow-up"
+caption: "The loop that keeps an expert group useful: start from a real decision, and track what happened to the advice."
+credit: "Diagram: Hussain MS"
 ---
 
 Global health runs on expert advice more than most people realise. WHO has technical advisory groups for almost everything. SAGE, its Strategic Advisory Group of Experts on immunization, shapes vaccine policy for the world. STAGE does the same for maternal, newborn, child and adolescent health and nutrition. Countries have their own versions: India's National Technical Advisory Group on Immunization (NTAGI) has advised the government on every major vaccine decision for more than two decades, including during COVID-19.

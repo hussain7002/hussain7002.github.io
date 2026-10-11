@@ -6,6 +6,10 @@ date: 2026-10-11
 minutes: 7
 featured: false
 draft: false
+image: "/img/writing/oxychat-small-ai.webp"
+imageAlt: "Flow diagram: a WhatsApp question is matched to a known intent, then answered with expert text or escalated"
+caption: "How OxyChat worked: no generated text, only answers written by experts, and an honest \"I don't know\" when the match was weak."
+credit: "Diagram: Hussain MS"
 ---
 
 In August 2026 the World Bank published its *World Development Report 2026: The Promise of Artificial Intelligence*. One of its central arguments is that developing countries do not need to build frontier models or giant data centres to benefit from AI. They should **adopt** tools that already exist, **adapt** them to local needs, and only later **advance** to building their own. It calls the cheap, local, practical end of this spectrum **small AI**, and names health as one of the sectors where it can make an immediate difference.

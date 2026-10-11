@@ -6,6 +6,10 @@ date: 2026-10-11
 minutes: 9
 featured: false
 draft: false
+image: "/img/writing/who-dpi-guidance-comments.webp"
+imageAlt: "Diagram of the draft DPI-H architecture in three layers, with a list of the eight comments"
+caption: "Where my eight comments landed, against a simplified view of the architecture in WHO's consultation draft (Draft V1.0)."
+credit: "Diagram: Hussain MS"
 ---
 
 Every country building digital health infrastructure eventually asks the same question: what, exactly, should be shared? Which registries, which records, which services should be national public infrastructure, and which should be left to programmes and vendors?

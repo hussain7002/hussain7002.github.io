@@ -6,6 +6,10 @@ date: 2026-10-11
 minutes: 8
 featured: false
 draft: false
+image: "/img/writing/designing-for-the-whole-health-system.webp"
+imageAlt: "List of seven health-system users and what each needs from a data product"
+caption: "Seven users of the same data. Most of them need a list to act on, not a chart."
+credit: "Diagram: Hussain MS"
 ---
 
 When a government health programme asks for "a dashboard", it usually means one screen, designed for the people who commissioned it: senior officers who want to see how the programme is doing. That screen is often well made. It has maps, charts and colour-coded indicators. It is reviewed in a meeting, admired, and then opened rarely.

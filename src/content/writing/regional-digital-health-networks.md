@@ -6,6 +6,10 @@ date: 2026-10-11
 minutes: 7
 featured: false
 draft: false
+image: "/img/writing/regional-digital-health-networks.webp"
+imageAlt: "Diagram from the Global Initiative on Digital Health to SEA-DAC to country focal points"
+caption: "How a regional network sits between global support and country requests."
+credit: "Diagram: Hussain MS"
 ---
 
 Digital health has no shortage of networks. There are global initiatives, regional collaboratives, communities of practice, coalitions, alliances and working groups. Many are launched with energy and a declaration. Fewer are still useful three years later.

@@ -6,6 +6,10 @@ date: 2026-10-11
 minutes: 7
 featured: false
 draft: false
+image: "/img/writing/digital-transformation-is-re-engineering.webp"
+imageAlt: "Bar chart: high-risk pregnancies identified rose from 2% to 15% after process changes"
+caption: "Same portal, different process: high-risk pregnancy identification in Saksham intervention areas in Chhattisgarh rose from 2% to 15%."
+credit: "Chart: Hussain MS"
 ---
 
 In 1990, Michael Hammer wrote an article in the Harvard Business Review with a blunt title: *Reengineering Work: Don't Automate, Obliterate.* His argument was that companies were spending fortunes putting computers on top of old processes, and getting old results faster. The real gains came only when they asked why the process existed at all, and redesigned it.

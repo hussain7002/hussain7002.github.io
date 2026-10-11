@@ -6,6 +6,11 @@ date: 2026-10-11
 minutes: 9
 featured: true
 draft: false
+image: "/img/writing/tea-gardens-maternal-mortality.webp"
+imageAlt: "Close-up of tea bushes under shade trees in an Assam tea garden"
+caption: "A tea garden in Assam. The state grows about half of India's tea."
+credit: "Photo: Bidyut Gogoi, CC BY 2.0, via Wikimedia Commons"
+creditUrl: "https://commons.wikimedia.org/wiki/File:Tea_garden_-_Assam.jpg"
 ---
 
 Somewhere this morning, in a hotel in London or Dubai or Tokyo, someone is pouring a cup of breakfast tea. It is strong and malty and dark, the kind of tea that stands up to milk. There is a good chance it came from Assam, which grows about half of India's tea. The finest Assam leaves are sold at auction for tens of thousands of rupees a kilogram.

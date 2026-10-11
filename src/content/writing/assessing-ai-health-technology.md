@@ -6,6 +6,11 @@ date: 2026-10-11
 minutes: 9
 featured: false
 draft: false
+image: "/img/writing/assessing-ai-health-technology.webp"
+imageAlt: "Horizontal bars scoring an AI fetal heart monitor on ten assessment questions"
+caption: "The ten-question rubric applied to an AI-assisted portable fetal heart monitor, scored from public information. Two questions cannot be scored until the vendor reports."
+credit: "Chart: Hussain MS · source: Saksham Aavishkar compendium"
+creditUrl: "https://media.path.org/documents/Saksham_Avishkar_Compendium_-_16April.pdf"
 ---
 
 Between 2023 and 2024 I helped run the Saksham MNCH Aavishkar Challenge, a USAID-supported innovation challenge organised by PATH to find technologies that could reduce maternal and newborn deaths in Assam, Chhattisgarh and Odisha. We evaluated more than 40 innovations, identified 15 for public health adoption, and the best were published in a public compendium. Several were AI-based: a portable fetal heart monitor that interprets traces automatically, a smartphone app that reads ultrasound images to flag risky pregnancies, devices that estimate haemoglobin without drawing blood using machine learning, and a virtual maternal care platform built on wearables.

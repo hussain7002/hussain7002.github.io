@@ -6,6 +6,10 @@ date: 2026-10-11
 minutes: 8
 featured: false
 draft: false
+image: "/img/writing/state-ai-readiness-index.webp"
+imageAlt: "Radar chart of six readiness dimensions for two illustrative states"
+caption: "Two illustrative states with similar averages and very different gaps. A profile shows each state what to fix first; a single score would hide it."
+credit: "Chart: Hussain MS · illustrative, not real data"
 ---
 
 In February 2026 the Ministry of Health and Family Welfare launched SAHI, the Strategy for Artificial Intelligence in Healthcare for India, together with BODH, a benchmarking platform for health AI built by IIT Kanpur with the National Health Authority. WHO's South-East Asia office called India the first country in the region to adopt a comprehensive national strategy for AI in health.

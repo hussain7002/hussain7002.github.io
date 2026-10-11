@@ -6,6 +6,10 @@ date: 2026-10-11
 minutes: 8
 featured: false
 draft: false
+image: "/img/writing/interoperability-is-not-a-solution.webp"
+imageAlt: "Three systems naming the same facility differently, joined through a master facility list"
+caption: "Three spellings, one facility. Linking starts with a shared identifier, not with an API."
+credit: "Diagram: Hussain MS · illustrative facility"
 ---
 
 In almost every digital health meeting I attend, someone says the problem is that our systems don't talk to each other, and the solution is interoperability. Heads nod. Someone mentions APIs. Someone mentions FHIR. The meeting moves on, satisfied.

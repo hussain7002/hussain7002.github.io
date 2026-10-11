@@ -6,6 +6,11 @@ date: 2026-10-11
 minutes: 7
 featured: false
 draft: false
+image: "/img/writing/dpi-for-health-2040.webp"
+imageAlt: "Men in a wooden boat crossing floodwater in Assam"
+caption: "Assam floods, August 2012. In the essay, Rupa leaves by boat before the road closes."
+credit: "Photo: EU Civil Protection and Humanitarian Aid, CC BY-SA 2.0, via Wikimedia Commons"
+creditUrl: "https://commons.wikimedia.org/wiki/File:EU_Civil_Protection_and_Humanitarian_Aid,_India_-_Assam_floods,_aug_2012.jpg"
 ---
 
 *This is a piece of imagination, not a forecast. The people are invented. The infrastructure is not far away.*

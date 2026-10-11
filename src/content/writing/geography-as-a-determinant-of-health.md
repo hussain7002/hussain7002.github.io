@@ -6,6 +6,11 @@ date: 2026-10-11
 minutes: 9
 featured: false
 draft: false
+image: "/img/writing/geography-as-a-determinant-of-health.webp"
+imageAlt: "False-colour satellite image of flooded land along the Brahmaputra in Bangladesh and India, July 2020"
+caption: "Monsoon floods along the Brahmaputra, July 2020, seen from space. Flooded land appears in blue-green, vegetation in red."
+credit: "Image: contains modified Copernicus Sentinel data (2020), European Union, via Wikimedia Commons"
+creditUrl: "https://commons.wikimedia.org/wiki/File:Floods_in_India_and_Bangladesh.jpg"
 ---
 
 Public health talks a lot about the social determinants of health: income, education, gender, caste. Those matter enormously. But there is an older determinant that sits underneath them and is easy to forget because it does not change with policy: **where you are on the earth.** The rock under your village, the water in your aquifer, the forest at the edge of your fields, the river that floods every monsoon.

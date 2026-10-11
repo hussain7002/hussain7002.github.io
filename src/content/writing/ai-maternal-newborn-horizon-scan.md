@@ -6,6 +6,10 @@ date: 2026-10-11
 minutes: 9
 featured: false
 draft: false
+image: "/img/writing/ai-maternal-newborn-horizon-scan.webp"
+imageAlt: "Three columns sorting eight AI tool categories into emerging, piloting and deployed"
+caption: "Eight kinds of AI tool reaching pregnant women and newborns, by how mature they are in low- and middle-income settings."
+credit: "Diagram: Hussain MS"
 ---
 
 Most AI-in-health conversations are about radiology, chatbots and hospital operations. Maternal and newborn health gets less attention, even though it is where low-cost diagnostics could save the most lives in low- and middle-income countries. Most maternal deaths are preventable, and most happen where there is no specialist to read a trace, scan or blood test.

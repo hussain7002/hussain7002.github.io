@@ -21,6 +21,14 @@ const date = d.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long',
     <p class="note" style="margin-top:22px">{d.draft && 'DRAFT · '}{d.topic} · {date} · {d.minutes} min read</p>
   </div>
 </header>
+{d.image && (
+  <div class="wrap">
+    <figure class="lead-fig">
+      <img src={d.image} alt={d.imageAlt ?? ''} width="1600" height="1000" decoding="async">
+      <figcaption>{d.caption}{d.credit && <span class="credit"> {d.creditUrl ? <a href={d.creditUrl} target="_blank" rel="noopener">{d.credit}</a> : d.credit}</span>}</figcaption>
+    </figure>
+  </div>
+)}
 <section class="sec">
   <div class="wrap"><article class="prose" style="--c:var(--red)"><Content /></article></div>
 </section>
