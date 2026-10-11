@@ -15,6 +15,7 @@
   --blue:#5B7BFF; --red:#FF6B5C; --green:#3CC98E; --yellow:#F8CC4F;
   --blue-soft:#1C2556; --red-soft:#3A1E22; --green-soft:#16352A; --yellow-soft:#3A3218;
   --on-color:#0F1226; --on-yellow:#0F1226; color-scheme:dark}}
+:root[data-theme="light"]{color-scheme:light}
 :root[data-theme="dark"]{
   --paper:#0F1226; --paper-2:#181C36; --ink:#F2F1EA; --muted:#A3A8C3; --rule:#2B3052;
   --blue:#5B7BFF; --red:#FF6B5C; --green:#3CC98E; --yellow:#F8CC4F;
@@ -177,7 +178,7 @@ section{scroll-margin-top:70px}
 
 /* publications */
 .pubs-sec{background:var(--blue-soft)}
-.pubs-sec .wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(32px,6vw,80px)}
+
 .pubs-sec .intro p{color:var(--muted);margin-top:18px;max-width:40ch}
 .pubs{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
 .pubs li{border-bottom:1px solid color-mix(in srgb,var(--ink) 18%,transparent)}
@@ -324,3 +325,28 @@ footer .disclaimer{flex-basis:100%;font-family:var(--sans);font-size:13px;line-h
 .next .see-all{white-space:normal;max-width:100%}
 .nav .mobile-menu ul{display:grid;gap:0}
 .nav .mobile-menu a{color:var(--ink)}
+
+/* publication cards: portrait covers in a tinted frame, like the case-study thumbnails */
+.pub-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(24px,3vw,40px) clamp(18px,2.4vw,32px);margin-top:44px}
+.pub-grid-lg{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:0}
+@media (max-width:1000px){.pub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.pub-grid,.pub-grid-lg{grid-template-columns:1fr}}
+.pub-card{display:grid;gap:12px;align-content:start;text-decoration:none;min-width:0}
+.pthumb{aspect-ratio:4/5;border-radius:18px;background:var(--tint);display:grid;place-items:center;overflow:hidden;padding:9% 0}
+.pubs-sec .pthumb{background:var(--paper)}
+.pthumb img{height:100%;width:auto;max-width:82%;object-fit:contain;border-radius:3px;box-shadow:0 2px 4px rgb(0 0 0 / .12),0 18px 34px -14px rgb(0 0 0 / .45);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.pub-card:hover .pthumb img{transform:translateY(-6px) rotate(-1.5deg) scale(1.02)}
+.pub-card .org{justify-self:start;font-family:var(--mono);font-size:11px;padding:4px 9px;border-radius:999px;background:var(--c);color:var(--on-color);margin-top:4px}
+.pub-card h3{font-size:clamp(17px,1.6vw,20px);line-height:1.25}
+.pub-grid-lg .pub-card h3{font-size:clamp(20px,2.2vw,26px)}
+.pub-card p{color:var(--muted);font-size:14px;margin:0}
+
+/* theme toggle */
+.nav-actions{display:flex;align-items:center;gap:10px}
+.theme-btn{width:38px;height:38px;border-radius:999px;border:1.5px solid color-mix(in srgb,var(--ink) 25%,transparent);background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer;padding:0}
+.theme-btn:hover{border-color:var(--ink)}
+.theme-btn svg{width:18px;height:18px}
+.theme-btn .sun{display:none}
+:root[data-theme="dark"] .theme-btn .sun{display:block}
+:root[data-theme="dark"] .theme-btn .moon{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .theme-btn .sun{display:block}:root:not([data-theme="light"]) .theme-btn .moon{display:none}}

@@ -3,12 +3,16 @@ import { publications } from '../data/site';
 interface Props { large?: boolean }
 const { large = false } = Astro.props;
 ---
-<ul class:list={['pubs', { 'pubs-lg': large }]}>
+<div class:list={['pub-grid', { 'pub-grid-lg': large }]}>
   {publications.map((p) => (
-    <li><a href={p.href} target="_blank" rel="noopener">
-      <img class="cover" src={p.cover} alt={`Cover of ${p.title}`} width="440" height="622" loading="lazy" decoding="async">
-      <span><span class="org" style={`--c:var(--${p.tint})`}>{p.org}</span><span class="t">{p.title}</span><span class="src">{p.src}</span></span>
-      <span class="arr" aria-hidden="true">↗</span>
-    </a></li>
+    <a class="pub-card rv" href={p.href} target="_blank" rel="noopener">
+      <div class={`pthumb t-${p.tint}`}>
+        <img src={p.cover} alt={`Cover of ${p.title}`} width="720" height="1018" loading="lazy" decoding="async">
+      </div>
+      <span class="org" style={`--c:var(--${p.tint})`}>{p.org}</span>
+      <h3>{p.title}</h3>
+      <p>{p.src}</p>
+      <span class="more">View publication ↗</span>
+    </a>
   ))}
-</ul>
+</div>

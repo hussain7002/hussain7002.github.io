@@ -8,7 +8,7 @@ featured: false
 draft: false
 ---
 
-Earlier this year I co-authored a Deloitte India paper on data governance under the Digital Personal Data Protection (DPDP) Act, 2023 and the DPDP Rules, 2025. That paper was about organisations in general. This piece is narrower and more personal: what the law means for people building, buying or deploying AI in health in India.
+I co-authored a paper by Deloitte India and the Confederation of Indian Industry on data governance under the Digital Personal Data Protection (DPDP) Act, 2023 and the DPDP Rules, 2025. That paper was about organisations in general. This piece is narrower and more personal: what the law means for people building, buying or deploying AI in health in India.
 
 The short answer: the DPDP Act is not an AI law, but almost every health AI project touches personal data at some point in its life, so the Act sets the boundaries whether teams think about it or not.
 
@@ -63,7 +63,7 @@ India now has three pieces that fit together: ABDM for the rails, the DPDP Act f
 
 ## Sources
 
-- [Deloitte India (2026), Unlocking Data Governance in Alignment with the DPDP Act, 2023 and the DPDP Rules, 2025](https://www.deloitte.com/in/en/Industries/life-sciences-health-care/strengthening-indias-healthcare-ecosystem-unlocking-data-governance-in-alignment-with-the-digital-personal-data-protection-dpdp-act-2023-and-the-dpdp-rules-2025.html)
+- [Deloitte India and CII, Strengthening India's healthcare ecosystem: Unlocking data governance in alignment with the DPDP Act, 2023 and the DPDP Rules, 2025](https://www.deloitte.com/in/en/Industries/life-sciences-health-care/strengthening-indias-healthcare-ecosystem-unlocking-data-governance-in-alignment-with-the-digital-personal-data-protection-dpdp-act-2023-and-the-dpdp-rules-2025.html)
 - [DPDP Rules, 2025: phased commencement](https://www.azbpartners.com/bank/indias-digital-personal-data-protection-act-phased-rollout-and-key-compliance-milestones/)
 - [DPDP Rules, 2025: Rule 13, additional obligations of Significant Data Fiduciaries](https://www.dpdpa.com/dpdparules/rule13.html)
 - [Launch of SAHI and BODH, February 2026](https://www.insightsonindia.com/2026/02/18/government-launch-sahi-and-bodh-initiatives/)

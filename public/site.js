@@ -96,6 +96,16 @@ drawAll(); document.fonts?.ready?.then(drawAll);
 let rz; addEventListener('resize', () => { clearTimeout(rz); rz=setTimeout(()=>{ sizeField(); drawField(performance.now()); drawAll(); },200); });
 matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', () => { drawAll(); drawField(performance.now()); });
 
+/* theme: automatic by default; the button flips light/dark and remembers the choice */
+const tb=document.getElementById('theme-btn'), sysDark=matchMedia('(prefers-color-scheme: dark)');
+tb?.addEventListener('click',()=>{
+  const root=document.documentElement, cur=root.getAttribute('data-theme')||(sysDark.matches?'dark':'light'), next=cur==='dark'?'light':'dark';
+  const auto=next===(sysDark.matches?'dark':'light');
+  if (auto) root.removeAttribute('data-theme'); else root.setAttribute('data-theme',next);
+  try { auto ? localStorage.removeItem('theme') : localStorage.setItem('theme',next); } catch(_) {}
+  drawAll(); drawField(performance.now());
+});
+
 /* mobile menu */
 const mb=document.getElementById('menu-btn'), mm=document.getElementById('mobile-menu');
 if (mb && mm) {
