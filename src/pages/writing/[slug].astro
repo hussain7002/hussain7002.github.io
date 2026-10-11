@@ -1,10 +1,10 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { render } from 'astro:content';
-import { getArticles } from '../../lib/writing';
+import { getArticles, isReadable } from '../../lib/writing';
 
 export async function getStaticPaths() {
-  const articles = await getArticles();
+  const articles = (await getArticles()).filter(isReadable);
   return articles.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
 }
 const { entry } = Astro.props;

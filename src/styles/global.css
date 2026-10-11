@@ -160,6 +160,9 @@ section{scroll-margin-top:70px}
 .articles a:hover{transform:translateY(-3px)}
 .articles .topic{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
 .articles .t{font-family:var(--display);font-weight:700;font-size:19px;line-height:1.2;letter-spacing:-.01em}
+.articles .soon{display:grid;gap:10px;height:100%;padding:20px;border-radius:16px;background:var(--tint);border:1.5px dashed color-mix(in srgb,var(--ink) 18%,transparent)}
+.articles .sum{font-size:15px;color:var(--muted)}
+.articles .soon .rt{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em}
 .articles .rt{font-size:13px;color:var(--muted);align-self:end}
 @media (max-width:960px){.articles{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.articles{grid-template-columns:1fr}}

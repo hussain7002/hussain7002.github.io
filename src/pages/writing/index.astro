@@ -1,7 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { getArticles } from '../../lib/writing';
-// Hidden from the nav and homepage until the first article is published (draft: false).
+import { getArticles, isReadable } from '../../lib/writing';
 const articles = await getArticles();
 const tints: Record<string, string> = { DPI: 'blue', 'Health data': 'green', 'Health systems': 'yellow', AI: 'red' };
 const fmt = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
@@ -20,7 +19,9 @@ const fmt = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 
       ? <p class="lede">The first essays are being written. <a href="/work/">Read the case studies</a> in the meantime.</p>
       : <ul class="articles" style="margin-top:0">
           {articles.map((a) => (
-            <li><a href={`/writing/${a.id}/`} class={`t-${tints[a.data.topic]}`}><span class="topic">{a.data.draft && 'DRAFT · '}{a.data.topic} · {fmt(a.data.date)}</span><span class="t">{a.data.title}</span><span style="font-size:15px;color:var(--muted)">{a.data.summary}</span><span class="rt">{a.data.minutes} min read</span></a></li>
+            <li>{isReadable(a)
+              ? <a href={`/writing/${a.id}/`} class={`t-${tints[a.data.topic]}`}><span class="topic">{a.data.draft && 'DRAFT · '}{a.data.topic}{!a.data.draft && ` · ${fmt(a.data.date)}`}</span><span class="t">{a.data.title}</span><span class="sum">{a.data.summary}</span><span class="rt">{a.data.minutes} min read</span></a>
+              : <div class={`soon t-${tints[a.data.topic]}`}><span class="topic">{a.data.topic}</span><span class="t">{a.data.title}</span><span class="sum">{a.data.summary}</span><span class="rt">Coming soon</span></div>}</li>
           ))}
         </ul>}
   </div>

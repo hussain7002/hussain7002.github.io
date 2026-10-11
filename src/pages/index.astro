@@ -3,13 +3,16 @@ import Base from '../layouts/Base.astro';
 import CaseCard from '../components/CaseCard.astro';
 import { getCollection } from 'astro:content';
 import { getArticles } from '../lib/writing';
+const tints: Record<string, string> = { DPI: 'blue', 'Health data': 'green', 'Health systems': 'yellow', AI: 'red' };
 import { lab, publications } from '../data/site';
 
 const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
 const homeWork = work.filter((w) => w.data.home).slice(0, 2);
 const homeLab = lab.slice(0, 3);
 const articles = await getArticles();
-const featured = articles.find((a) => a.data.featured) ?? articles[0];
+const published = articles.filter((a) => !a.data.draft);
+const featured = published.find((a) => a.data.featured) ?? published[0];
+const upcoming = articles.filter((a) => a.data.draft).slice(0, 3);
 ---
 <Base>
 <header class="hero" id="top">
@@ -110,14 +113,20 @@ const featured = articles.find((a) => a.data.featured) ?? articles[0];
 </section>
 )}
 
-{featured && (
+{articles.length > 0 && (
 <section class="sec writing" id="writing">
   <div class="wrap">
-    <div class="sec-head"><div><div class="eyebrow">Writing</div><h2>Essays and articles</h2></div><div class="side"><p>On digital public infrastructure, health data, AI and how public systems actually change.</p><a class="see-all" style="--c:var(--red)" href="/writing/">All {articles.length} {articles.length === 1 ? 'article' : 'articles'} →</a></div></div>
-    <a class="feature rv" href={`/writing/${featured.id}/`}>
-      <div class="art"><canvas data-art="feature" aria-hidden="true"></canvas></div>
-      <div><div class="kicker">{featured.data.draft && 'DRAFT · '}Featured · {featured.data.minutes} min</div><h3>{featured.data.title}</h3><p>{featured.data.summary}</p><span class="more" style="display:inline-block;margin-top:18px">Read →</span></div>
-    </a>
+    <div class="sec-head"><div><div class="eyebrow">Writing</div><h2>Essays and articles</h2></div><div class="side"><p>On digital public infrastructure, health data, AI and how public systems actually change.</p><a class="see-all" style="--c:var(--red)" href="/writing/">All {articles.length} articles →</a></div></div>
+    {featured ? (
+      <a class="feature rv" href={`/writing/${featured.id}/`}>
+        <div class="art"><canvas data-art="feature" aria-hidden="true"></canvas></div>
+        <div><div class="kicker">Featured · {featured.data.minutes} min</div><h3>{featured.data.title}</h3><p>{featured.data.summary}</p><span class="more" style="display:inline-block;margin-top:18px">Read →</span></div>
+      </a>
+    ) : (
+      <ul class="articles" style="margin-top:44px">
+        {upcoming.map((a) => <li><div class={`soon t-${tints[a.data.topic]}`}><span class="topic">{a.data.topic}</span><span class="t">{a.data.title}</span><span class="sum">{a.data.summary}</span><span class="rt">Coming soon</span></div></li>)}
+      </ul>
+    )}
   </div>
 </section>
 )}
