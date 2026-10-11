@@ -1,4 +1,4 @@
-# hussainrao site
+# Hussain MS: portfolio site
 
 Astro static site, deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push to `main`.
 
