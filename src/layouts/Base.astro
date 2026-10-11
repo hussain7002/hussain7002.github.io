@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { getCollection } from 'astro:content';
+import { getArticles } from '../lib/writing';
 import { site, lab } from '../data/site';
 
 interface Props { title?: string; description?: string; contact?: boolean }
@@ -11,7 +11,7 @@ const ogImage = new URL('/og.png', Astro.site);
 const path = Astro.url.pathname;
 
 // Writing appears in the nav only once at least one article is published.
-const hasWriting = (await getCollection('writing', ({ data }) => !data.draft)).length > 0;
+const hasWriting = (await getArticles()).length > 0;
 const nav = [
   { href: '/work/', label: 'Work' },
   ...(lab.length ? [{ href: '/lab/', label: 'Lab' }] : []),

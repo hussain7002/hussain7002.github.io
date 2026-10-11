@@ -2,12 +2,13 @@
 import Base from '../layouts/Base.astro';
 import CaseCard from '../components/CaseCard.astro';
 import { getCollection } from 'astro:content';
+import { getArticles } from '../lib/writing';
 import { lab, publications } from '../data/site';
 
 const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
 const homeWork = work.filter((w) => w.data.home).slice(0, 2);
 const homeLab = lab.slice(0, 3);
-const articles = (await getCollection('writing', ({ data }) => !data.draft)).sort((a, b) => +b.data.date - +a.data.date);
+const articles = await getArticles();
 const featured = articles.find((a) => a.data.featured) ?? articles[0];
 ---
 <Base>
@@ -115,7 +116,7 @@ const featured = articles.find((a) => a.data.featured) ?? articles[0];
     <div class="sec-head"><div><div class="eyebrow">Writing</div><h2>Essays and articles</h2></div><div class="side"><p>On digital public infrastructure, health data, AI and how public systems actually change.</p><a class="see-all" style="--c:var(--red)" href="/writing/">All {articles.length} {articles.length === 1 ? 'article' : 'articles'} →</a></div></div>
     <a class="feature rv" href={`/writing/${featured.id}/`}>
       <div class="art"><canvas data-art="feature" aria-hidden="true"></canvas></div>
-      <div><div class="kicker">Featured · {featured.data.minutes} min</div><h3>{featured.data.title}</h3><p>{featured.data.summary}</p><span class="more" style="display:inline-block;margin-top:18px">Read →</span></div>
+      <div><div class="kicker">{featured.data.draft && 'DRAFT · '}Featured · {featured.data.minutes} min</div><h3>{featured.data.title}</h3><p>{featured.data.summary}</p><span class="more" style="display:inline-block;margin-top:18px">Read →</span></div>
     </a>
   </div>
 </section>

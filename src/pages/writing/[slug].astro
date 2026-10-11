@@ -1,9 +1,10 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { getCollection, render } from 'astro:content';
+import { render } from 'astro:content';
+import { getArticles } from '../../lib/writing';
 
 export async function getStaticPaths() {
-  const articles = await getCollection('writing', ({ data }) => !data.draft);
+  const articles = await getArticles();
   return articles.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
 }
 const { entry } = Astro.props;
@@ -17,7 +18,7 @@ const date = d.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long',
     <a class="crumb" href="/writing/">← All writing</a>
     <h1 style="max-width:22ch">{d.title}</h1>
     <p class="lede">{d.summary}</p>
-    <p class="note" style="margin-top:22px">{d.topic} · {date} · {d.minutes} min read</p>
+    <p class="note" style="margin-top:22px">{d.draft && 'DRAFT · '}{d.topic} · {date} · {d.minutes} min read</p>
   </div>
 </header>
 <section class="sec">
