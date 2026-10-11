@@ -4,7 +4,7 @@ summary: "I took a popular public dataset on pregnancy risk from Bangladesh, bui
 topic: "AI"
 date: 2026-10-11
 minutes: 9
-featured: false
+featured: true
 draft: false
 ---
 

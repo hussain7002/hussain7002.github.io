@@ -15,7 +15,7 @@ const date = d.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long',
 <Base title={d.title} description={d.summary}>
 <header class="page-head">
   <div class="wrap">
-    <a class="crumb" href="/writing/">← All writing</a>
+    <a class="crumb" href="/work/#articles">← Work &amp; Writing</a>
     <h1 style="max-width:22ch">{d.title}</h1>
     <p class="lede">{d.summary}</p>
     <p class="note" style="margin-top:22px">{d.draft && 'DRAFT · '}{d.topic} · {date} · {d.minutes} min read</p>

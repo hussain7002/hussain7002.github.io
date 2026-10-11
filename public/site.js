@@ -52,7 +52,7 @@ function drawThumb(c){
   const d=Math.min(devicePixelRatio||1,2); c.width=r.width*d; c.height=r.height*d;
   const g=c.getContext('2d'); g.setTransform(d,0,0,d,0,0); const W=r.width,H=r.height;
   const ink=css('--ink'), Y=css('--yellow'), Rd=css('--red'), B=css('--blue'), G=css('--green'), P=css('--paper'), M=css('--muted');
-  const art=c.dataset.art, R=rnd(art.length*997+7); g.lineWidth=1.5;
+  const art=c.dataset.art, sd=c.dataset.seed||'', R=rnd(art.length*997+7+Math.abs([...sd].reduce((s,ch)=>s*31+ch.charCodeAt(0)|0,0)%100000)*13); g.lineWidth=1.5;
   if (art==='grid'){
     const cols=4, rows=3, p=14, w=(W-p*(cols+1))/cols, h=(H-p*(rows+1)-30)/rows, pal=[B,Rd,Y,G];
     for(let i=0;i<cols;i++)for(let j=0;j<rows;j++){const x=p+i*(w+p),y=34+p+j*(h+p); g.fillStyle=P; rr(g,x,y,w,h,8); g.fill();
@@ -74,7 +74,7 @@ function drawThumb(c){
     g.strokeStyle=ink; g.globalAlpha=.3; n.forEach((a,i)=>n.forEach((b,j)=>{ if(j>i){g.beginPath(); g.moveTo(a[1]*W,a[2]*H); g.lineTo(b[1]*W,b[2]*H); g.stroke();}})); g.globalAlpha=1;
     n.forEach(([l,x,y,col])=>{ g.fillStyle=col; g.beginPath(); g.arc(x*W,y*H,10,0,7); g.fill(); g.fillStyle=ink; g.font='600 12px ui-monospace,monospace'; g.fillText(l,x*W+15,y*H+4); });
   } else if (art==='chat'){
-    const msgs=[[0,.34,Rd],[1,.5,P],[0,.42,Rd],[1,.28,P],[0,.38,Rd]], pad=W*.08; let y=H*.12; const bh=Math.min(34,H*.12);
+    const msgs=sd ? [0,1,0,1,0].map((s)=>[s,.24+R()*.3,s?P:Rd]) : [[0,.34,Rd],[1,.5,P],[0,.42,Rd],[1,.28,P],[0,.38,Rd]], pad=W*.08; let y=H*.12; const bh=Math.min(34,H*.12);
     msgs.forEach(([side,w,col])=>{ const bw=W*w, x=side? W-pad-bw : pad; g.fillStyle=col; rr(g,x,y,bw,bh,bh/2); g.fill();
       g.fillStyle=side? M : P; g.globalAlpha=.55; for(let k=0;k<3;k++){ g.fillRect(x+14+k*(bw-28)/3, y+bh/2-2, (bw-28)/3-8, 4); } g.globalAlpha=1; y+=bh+H*.05; });
   } else if (art==='cyl'){

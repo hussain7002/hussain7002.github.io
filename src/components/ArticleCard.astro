@@ -1,0 +1,31 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { isReadable, topicArt } from '../lib/writing';
+interface Props { entry: CollectionEntry<'writing'> }
+const { entry } = Astro.props;
+const d = entry.data;
+const { art, tint, labels } = topicArt(entry);
+const readable = isReadable(entry);
+---
+{readable ? (
+  <a class="case rv" data-kind="article" href={`/writing/${entry.id}/`}>
+    <div class={`thumb t-${tint}`}>
+      <canvas data-art={art} data-seed={entry.id} data-labels={labels} aria-hidden="true"></canvas>
+      <span class="tag">{d.draft ? 'Draft' : 'Article'} · {d.topic}</span>
+    </div>
+    <div class="meta"><span>{d.topic}</span><span>{d.minutes} min read</span></div>
+    <h3>{d.title}</h3>
+    <p>{d.summary}</p>
+    <span class="more">Read article →</span>
+  </a>
+) : (
+  <div class="case soon rv" data-kind="article">
+    <div class={`thumb t-${tint}`}>
+      <canvas data-art={art} data-seed={entry.id} data-labels={labels} aria-hidden="true"></canvas>
+      <span class="tag">Coming soon · {d.topic}</span>
+    </div>
+    <div class="meta"><span>{d.topic}</span><span>Coming soon</span></div>
+    <h3>{d.title}</h3>
+    <p>{d.summary}</p>
+  </div>
+)}

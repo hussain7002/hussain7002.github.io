@@ -1,22 +1,46 @@
 ---
 import Base from '../../layouts/Base.astro';
 import CaseCard from '../../components/CaseCard.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
+import { getArticles, isReadable } from '../../lib/writing';
 const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+const articles = await getArticles();
+const nArticles = articles.filter(isReadable).length;
 ---
-<Base title="Work" description="Case studies in data strategy, digital health products, GIS and AI for public health in India, with ADB, Deloitte, PATH and WHO SEARO.">
+<Base title="Work & Writing" description="Case studies and articles on data strategy, digital public infrastructure, AI and public health in India, from work with ADB, Deloitte, PATH and WHO SEARO.">
 <header class="page-head">
   <div class="wrap">
-    <div class="eyebrow">Selected work</div>
-    <h1>Case studies</h1>
-    <p class="lede">Work from my roles at the Asian Development Bank, Deloitte and PATH: national strategy, digital products, maps and AI, from the National Urban Health Mission to tea gardens in Assam. Each one gives the problem, my role, the approach and what happened.</p>
+    <div class="eyebrow">Work &amp; Writing</div>
+    <h1>Case studies and articles</h1>
+    <p class="lede"><strong>Case studies</strong> come from my roles at the Asian Development Bank, Deloitte and PATH: the problem, my role, the approach and what happened. <strong>Articles</strong> are my own writing on digital public infrastructure, health data, AI and how public health systems change.</p>
   </div>
 </header>
 <section class="sec">
   <div class="wrap">
-    <div class="list-grid">
+    <div class="chips" role="group" aria-label="Show">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="case" aria-pressed="false">Case studies <span>{work.length}</span></button>
+      <button type="button" data-filter="article" aria-pressed="false">Articles <span>{nArticles}</span></button>
+    </div>
+    <div class="list-grid" id="ww">
       {work.map((w) => <CaseCard entry={w} />)}
+      {articles.map((a) => <ArticleCard entry={a} />)}
     </div>
   </div>
 </section>
+<script is:inline>
+(() => {
+  const grid = document.getElementById('ww'), btns = [...document.querySelectorAll('.chips button')];
+  const map = { '#case-studies': 'case', '#articles': 'article' };
+  const set = (f, push) => {
+    btns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.filter === f)));
+    grid.querySelectorAll('[data-kind]').forEach((el) => { el.hidden = f !== 'all' && el.dataset.kind !== f; });
+    if (push) history.replaceState(null, '', f === 'all' ? location.pathname : (f === 'case' ? '#case-studies' : '#articles'));
+    window.dispatchEvent(new Event('resize'));
+  };
+  btns.forEach((b) => b.addEventListener('click', () => set(b.dataset.filter, true)));
+  if (map[location.hash]) set(map[location.hash], false);
+})();
+</script>
 </Base>

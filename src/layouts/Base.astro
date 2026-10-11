@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import { getArticles } from '../lib/writing';
 import { site, lab } from '../data/site';
 
 interface Props { title?: string; description?: string; contact?: boolean }
@@ -10,16 +9,14 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL('/og.png', Astro.site);
 const path = Astro.url.pathname;
 
-// Writing appears in the nav only once at least one article is published.
-const hasWriting = (await getArticles()).length > 0;
+// Case studies and articles share one section (/work/); article pages stay under /writing/.
 const nav = [
-  { href: '/work/', label: 'Work' },
+  { href: '/work/', label: 'Work & Writing' },
   ...(lab.length ? [{ href: '/lab/', label: 'Lab' }] : []),
-  ...(hasWriting ? [{ href: '/writing/', label: 'Writing' }] : []),
   { href: '/publications/', label: 'Publications' },
   { href: '/about/', label: 'About' },
 ];
-const current = (href: string) => (path.startsWith(href) ? 'page' : undefined);
+const current = (href: string) => (path.startsWith(href) || (href === '/work/' && path.startsWith('/writing/')) ? 'page' : undefined);
 ---
 <!doctype html>
 <html lang="en-IN">

@@ -4,10 +4,10 @@ interface Props { entry: CollectionEntry<'work'> }
 const { entry } = Astro.props;
 const d = entry.data;
 ---
-<a class="case rv" href={`/work/${entry.id}/`}>
+<a class="case rv" data-kind="case" href={`/work/${entry.id}/`}>
   <div class={`thumb t-${d.tint}`}>
     <canvas data-art={d.art} data-labels={d.artLabels} aria-hidden="true"></canvas>
-    <span class="tag">{d.tag}</span>
+    <span class="tag">Case study · {d.tag}</span>
   </div>
   <div class="meta"><span>{d.client.split(';')[0].split(',')[0]}</span><span>{d.place.split(',')[0]}</span></div>
   <h3>{d.title}</h3>

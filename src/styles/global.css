@@ -123,6 +123,13 @@ section{scroll-margin-top:70px}
 .meta{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:12px;color:var(--muted)}
 .case h3{font-size:clamp(22px,2.4vw,28px);line-height:1.15}
 .case p{color:var(--muted);font-size:15.5px;max-width:52ch}
+.case[hidden]{display:none}
+.case.soon .thumb{opacity:.55;outline:1.5px dashed color-mix(in srgb,var(--ink) 25%,transparent);outline-offset:-1.5px}
+.case.soon h3,.case.soon p{opacity:.75}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:clamp(28px,4vw,44px)}
+.chips button{font:inherit;font-size:14px;font-weight:600;padding:9px 16px;border-radius:999px;border:1.5px solid color-mix(in srgb,var(--ink) 22%,transparent);background:transparent;color:var(--ink);cursor:pointer}
+.chips button span{font-family:var(--mono);font-size:11px;opacity:.65;margin-left:4px}
+.chips button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .more{font-size:14px;font-weight:600;color:var(--blue)}
 .t-blue{--tint:var(--blue-soft)}.t-red{--tint:var(--red-soft)}.t-green{--tint:var(--green-soft)}.t-yellow{--tint:var(--yellow-soft)}
 @media (max-width:760px){.work-grid{grid-template-columns:1fr}}
