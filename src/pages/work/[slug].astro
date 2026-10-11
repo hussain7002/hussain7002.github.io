@@ -1,0 +1,43 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+  return work.map((entry, i) => ({ params: { slug: entry.id }, props: { entry, next: work[(i + 1) % work.length] } }));
+}
+const { entry, next } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+---
+<Base title={d.title} description={d.summary}>
+<header class="page-head case-hero">
+  <div class="wrap">
+    <a class="crumb" href="/work/">← All case studies</a>
+    <h1 style="max-width:22ch">{d.title}</h1>
+    <p class="lede">{d.summary}</p>
+    <div class={`thumb t-${d.tint}`}><canvas data-art={d.art} data-labels={d.artLabels} aria-hidden="true"></canvas><span class="tag">{d.tag}</span></div>
+  </div>
+</header>
+<section class="case-body">
+  <div class="wrap" style={`--c:var(--${d.tint})`}>
+    <article class="prose"><Content /></article>
+    <aside class="facts">
+      <div><div class="k">{d.number}</div><div class="cap">{d.numberCaption}</div></div>
+      <dl>
+        <div><dt>Organisation</dt><dd>{d.org}</dd></div>
+        <div><dt>Client / programme</dt><dd>{d.client}</dd></div>
+        <div><dt>Where</dt><dd>{d.place}</dd></div>
+        <div><dt>When</dt><dd>{d.year}</dd></div>
+        <div><dt>My role</dt><dd>{d.role}</dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+<section class="next">
+  <div class="wrap">
+    <a class="see-all" href="/work/">← All case studies</a>
+    <a class="see-all" style={`--c:var(--${next.data.tint})`} href={`/work/${next.id}/`}>Next: {next.data.title} →</a>
+  </div>
+</section>
+</Base>

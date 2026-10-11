@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import { lab } from '../data/site';
+---
+<Base title="Lab" description="Independent projects on public health data: my own code on public datasets.">
+<header class="page-head">
+  <div class="wrap">
+    <div class="eyebrow" style="--dot:var(--green)">Lab</div>
+    <h1>Independent projects</h1>
+    <p class="lede">Independent projects: my own code on public data. Tools I built in my jobs are in the <a href="/work/">case studies</a>.</p>
+  </div>
+</header>
+<section class="sec lab">
+  <div class="wrap">
+    <div class="lab-list">
+      {lab.map((t) => (
+        <article class={`tool t-${t.tint}`} style={`--c:var(--${t.tint});--r:${t.shape}`}>
+          <div class="ico"><span></span></div>
+          <span class="pill">{t.status}</span>
+          <h3>{t.title}</h3>
+          <p>{t.text}</p>
+          <div class="meta"><span>{t.meta}</span><a class="more" href={t.href}>Case study →</a></div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+</Base>

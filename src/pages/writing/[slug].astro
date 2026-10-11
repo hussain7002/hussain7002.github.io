@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('writing', ({ data }) => !data.draft);
+  return articles.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+const date = d.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base title={d.title} description={d.summary}>
+<header class="page-head">
+  <div class="wrap">
+    <a class="crumb" href="/writing/">← All writing</a>
+    <h1 style="max-width:22ch">{d.title}</h1>
+    <p class="lede">{d.summary}</p>
+    <p class="note" style="margin-top:22px">{d.topic} · {date} · {d.minutes} min read</p>
+  </div>
+</header>
+<section class="sec">
+  <div class="wrap"><article class="prose" style="--c:var(--red)"><Content /></article></div>
+</section>
+</Base>

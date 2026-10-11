@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import CaseCard from '../../components/CaseCard.astro';
+import { getCollection } from 'astro:content';
+const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+---
+<Base title="Work" description="Case studies in data strategy, digital health products, GIS and AI for public health in India, with ADB, Deloitte, PATH and WHO SEARO.">
+<header class="page-head">
+  <div class="wrap">
+    <div class="eyebrow">Selected work</div>
+    <h1>Case studies</h1>
+    <p class="lede">Work from my roles at the Asian Development Bank, Deloitte and PATH: national strategy, digital products, maps and AI, from the National Urban Health Mission to tea gardens in Assam. Each one gives the problem, my role, the approach and what happened.</p>
+  </div>
+</header>
+<section class="sec">
+  <div class="wrap">
+    <div class="list-grid">
+      {work.map((w) => <CaseCard entry={w} />)}
+    </div>
+  </div>
+</section>
+</Base>

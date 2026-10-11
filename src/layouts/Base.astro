@@ -1,0 +1,94 @@
+---
+import '../styles/global.css';
+import { getCollection } from 'astro:content';
+import { site, lab } from '../data/site';
+
+interface Props { title?: string; description?: string; contact?: boolean }
+const { title, description = site.description, contact = true } = Astro.props;
+const fullTitle = title ? `${title} · ${site.name}` : `${site.name} · Data, DPI and AI for public health`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL('/og.png', Astro.site);
+const path = Astro.url.pathname;
+
+// Writing appears in the nav only once at least one article is published.
+const hasWriting = (await getCollection('writing', ({ data }) => !data.draft)).length > 0;
+const nav = [
+  { href: '/work/', label: 'Work' },
+  ...(lab.length ? [{ href: '/lab/', label: 'Lab' }] : []),
+  ...(hasWriting ? [{ href: '/writing/', label: 'Writing' }] : []),
+  { href: '/publications/', label: 'Publications' },
+  { href: '/about/', label: 'About' },
+];
+const current = (href: string) => (path.startsWith(href) ? 'page' : undefined);
+---
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{fullTitle}</title>
+  <meta name="description" content={description}>
+  <meta name="author" content="Hussain Rao (Hussain MS)">
+  <link rel="canonical" href={canonical}>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="sitemap" href="/sitemap-index.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content={fullTitle}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:image" content={ogImage}>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org', '@type': 'Person', name: 'Hussain Rao', alternateName: 'Hussain MS',
+    url: Astro.site?.href, email: `mailto:${site.email}`,
+    alumniOf: { '@type': 'CollegeOrUniversity', name: 'Indian Institute of Technology Kharagpur' },
+    knowsAbout: ['Digital health', 'Digital public infrastructure', 'Health data', 'AI for health', 'GIS'],
+  })} />
+</head>
+<body>
+<nav class="nav" aria-label="Primary">
+  <div class="wrap">
+    <a class="mark" href="/"><i aria-hidden="true"><b></b><b></b><b></b><b></b></i>{site.name}</a>
+    <ul>
+      {nav.map((n) => <li><a href={n.href} aria-current={current(n.href)}>{n.label}</a></li>)}
+    </ul>
+    <a class="cta" href="#contact">Get in touch</a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <ul>
+      {nav.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
+      <li><a href="#contact">Get in touch</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <slot />
+</main>
+
+{contact && (
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h2>Building something for <span>public health?</span> Let's talk.</h2>
+    <div class="contact-row">
+      <span class="email" id="email">{site.email}</span>
+      <button class="copy" id="copy" type="button">Copy email</button>
+      <div class="links">
+        <a href={`mailto:${site.email}?subject=CV%20request`}>CV on request ↗</a>
+        {site.linkedin && <a href={site.linkedin} target="_blank" rel="noopener">LinkedIn ↗</a>}
+      </div>
+    </div>
+  </div>
+</section>
+)}
+<div class="stripe" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<footer><div class="wrap"><p class="disclaimer">Views expressed on this site are my own and do not represent those of my current or past employers, clients or partners. Case studies use only publicly shareable information.</p><span>© {new Date().getFullYear()} {site.name} · {site.location}</span><a href={`mailto:${site.email}`} style="color:inherit;text-decoration:none">{site.email}</a></div></footer>
+<script is:inline src="/site.js" defer></script>
+</body>
+</html>

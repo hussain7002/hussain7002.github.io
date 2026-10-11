@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import { publications } from '../data/site';
+---
+<Base title="Publications" description="Publications for WHO SEARO and Deloitte on respiratory care equipment, healthcare access technology and health data governance.">
+<header class="page-head">
+  <div class="wrap">
+    <div class="eyebrow">Publications</div>
+    <h1>Institutional reports</h1>
+    <p class="lede">Regional guidance and practice reports I co-authored or contributed to, for WHO's South-East Asia Regional Office and Deloitte.</p>
+  </div>
+</header>
+<section class="sec">
+  <div class="wrap">
+    <ul class="pubs">
+      {publications.map((p) => (
+        <li><a href={p.href} target="_blank" rel="noopener"><span class="org" style={`--c:var(--${p.tint})`}>{p.org}</span><span><span class="t">{p.title}</span><span class="src">{p.src}</span></span><span class="arr">↗</span></a></li>
+      ))}
+    </ul>
+  </div>
+</section>
+</Base>
