@@ -1,6 +1,6 @@
 ---
-title: "What India's HMIS data for 2019–20 shows"
-summary: "An analysis of a year of national Health Management Information System data, and what it can and cannot tell a programme manager."
+title: "Give me HMIS data: what I would do with it first"
+summary: "What anyone can do immediately with India's Health Management Information System data, an evaluation of the 2019–20 dataset, and how I would improve it today."
 topic: "Health data"
 date: 2026-10-08
 minutes: 9

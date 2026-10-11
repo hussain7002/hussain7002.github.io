@@ -1,0 +1,62 @@
+== 1. The data ==
+rows: 1014 | unique rows: 452 | duplicated rows: 562
+RiskLevel
+low risk     406
+mid risk     336
+high risk    272
+age range: 10 - 70 | median 26.0
+implausible values: HeartRate<40: 2 | Age<13 or >50: 134
+
+== 2. The usual way: random 80/20 split on all rows (duplicates can leak into test) ==
+test rows that also appear identically in training: 152 of 203
+logistic regression  AUROC 0.931  sensitivity 0.67  PPV 0.78  accuracy 0.86
+random forest        AUROC 0.962  sensitivity 0.93  PPV 0.91  accuracy 0.96
+
+== 3. Honest way: deduplicate, then 5-fold stratified cross-validation ==
+logistic regression  AUROC 0.894 (sd 0.027)  sensitivity 0.55  PPV 0.75  accuracy 0.84  Brier 0.112
+random forest        AUROC 0.920 (sd 0.027)  sensitivity 0.70  PPV 0.79  accuracy 0.88  Brier 0.091
+
+== 4. Calibration (deduplicated, out-of-fold, logistic regression) ==
+                 n  mean_predicted  observed
+bin                                         
+(-0.001, 0.1]  194           0.052     0.041
+(0.1, 0.2]     104           0.138     0.087
+(0.2, 0.4]      53           0.263     0.491
+(0.4, 0.6]      35           0.497     0.486
+(0.6, 0.8]      24           0.687     0.667
+(0.8, 1.0]      42           0.933     0.857
+random forest:
+                 n  mean_predicted  observed
+bin                                         
+(-0.001, 0.1]  272           0.016     0.044
+(0.1, 0.2]      33           0.147     0.182
+(0.2, 0.4]      39           0.302     0.282
+(0.4, 0.6]      23           0.521     0.609
+(0.6, 0.8]      24           0.685     0.583
+(0.8, 1.0]      61           0.929     0.902
+
+== 5. Subgroups by age (deduplicated, out-of-fold) ==
+logistic regression
+  under 20     n= 126  high-risk share 0.17  AUROC 0.896  sensitivity 0.36
+  20-34        n= 189  high-risk share 0.19  AUROC 0.887  sensitivity 0.39
+  35 and over  n= 137  high-risk share 0.39  AUROC 0.874  sensitivity 0.72
+random forest
+  under 20     n= 126  high-risk share 0.17  AUROC 0.908  sensitivity 0.45
+  20-34        n= 189  high-risk share 0.19  AUROC 0.946  sensitivity 0.78
+  35 and over  n= 137  high-risk share 0.39  AUROC 0.868  sensitivity 0.76
+
+== 6. What drives the model (random forest feature importance) ==
+BS             0.394
+SystolicBP     0.234
+Age            0.116
+DiastolicBP    0.109
+HeartRate      0.074
+BodyTemp       0.073
+
+== 7. Choosing the threshold: sensitivity vs false alarms (deduplicated, out-of-fold) ==
+logistic regression  threshold 0.5: sensitivity 0.54  PPV 0.73  flagged 18% of women  | under-20 sensitivity 0.36
+logistic regression  threshold 0.3: sensitivity 0.68  PPV 0.67  flagged 25% of women  | under-20 sensitivity 0.59
+logistic regression  threshold 0.2: sensitivity 0.85  PPV 0.62  flagged 34% of women  | under-20 sensitivity 0.86
+random forest        threshold 0.5: sensitivity 0.71  PPV 0.79  flagged 22% of women  | under-20 sensitivity 0.45
+random forest        threshold 0.3: sensitivity 0.79  PPV 0.70  flagged 28% of women  | under-20 sensitivity 0.59
+random forest        threshold 0.2: sensitivity 0.84  PPV 0.64  flagged 33% of women  | under-20 sensitivity 0.73

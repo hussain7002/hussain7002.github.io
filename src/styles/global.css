@@ -281,6 +281,12 @@ footer .disclaimer{flex-basis:100%;font-family:var(--sans);font-size:13px;line-h
 .prose li::marker{color:var(--c,var(--blue))}
 .prose a{color:var(--blue);text-underline-offset:3px}
 .prose strong{font-weight:600}
+.prose table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse;font-size:15px;line-height:1.45}
+.prose th,.prose td{padding:9px 12px;border-bottom:1px solid color-mix(in srgb,var(--ink) 12%,transparent);text-align:left;vertical-align:top;min-width:7em}
+.prose th{font-weight:600;border-bottom-width:2px}
+.prose pre{max-width:100%;overflow-x:auto;padding:16px 18px;border-radius:12px;font-size:13px;line-height:1.5}
+.prose code{font-family:var(--mono);font-size:.88em}
+.prose h2 + p em,.prose table + p em{color:var(--muted)}
 .prose blockquote{margin:1.6em 0;padding:4px 0 4px 20px;border-left:4px solid var(--c,var(--blue));color:var(--muted);font-size:16px}
 
 .next{border-top:1px solid var(--rule)}
