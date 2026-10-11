@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { publications } from '../data/site';
+import PubList from '../components/PubList.astro';
 ---
 <Base title="Publications" description="Publications for WHO SEARO and Deloitte on respiratory care equipment, healthcare access technology and health data governance.">
 <header class="page-head">
@@ -12,11 +12,7 @@ import { publications } from '../data/site';
 </header>
 <section class="sec">
   <div class="wrap">
-    <ul class="pubs">
-      {publications.map((p) => (
-        <li><a href={p.href} target="_blank" rel="noopener"><span class="org" style={`--c:var(--${p.tint})`}>{p.org}</span><span><span class="t">{p.title}</span><span class="src">{p.src}</span></span><span class="arr">↗</span></a></li>
-      ))}
-    </ul>
+    <PubList large />
   </div>
 </section>
 </Base>
