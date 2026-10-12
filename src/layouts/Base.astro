@@ -51,7 +51,7 @@ const current = (href: string) => ((href === '/' ? path === '/' : path.startsWit
 <body>
 <nav class="nav" aria-label="Primary">
   <div class="wrap">
-    <a class="mark" href="/"><i aria-hidden="true"><b></b><b></b><b></b><b></b></i>{site.name}</a>
+    <a class="mark" href="/"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><clipPath id="logo-clip"><rect width="24" height="18.8"/></clipPath><g clip-path="url(#logo-clip)"><g class="o" fill="none" stroke-width="1.6"><circle cx="6.3" cy="5.4" r="3.2"/><circle cx="17.7" cy="5.4" r="3.2"/><ellipse cx="12" cy="13.2" rx="8.4" ry="7.6"/></g><circle cx="6.3" cy="5.4" r="3.2" fill="#111"/><circle cx="17.7" cy="5.4" r="3.2" fill="#111"/><circle cx="6.1" cy="5.1" r="1.4" fill="#D2AC84"/><circle cx="17.9" cy="5.1" r="1.4" fill="#D2AC84"/><ellipse cx="12" cy="13.2" rx="8.4" ry="7.6" fill="#111"/><ellipse cx="12" cy="15.9" rx="3.8" ry="2.7" fill="#D2AC84"/><ellipse cx="12" cy="14.7" rx="1.4" ry="1" fill="#111"/><path d="M12 15.5v1M10.9 16.7q1.1 .8 2.2 0" stroke="#111" stroke-width=".7" stroke-linecap="round" fill="none"/><circle cx="8.8" cy="11.5" r="1.05" fill="#fff"/><circle cx="15.2" cy="11.5" r="1.05" fill="#fff"/></g><rect x=".5" y="18.8" width="23" height="4.7" rx=".8" fill="#8C8780"/><path d="M.5 21.15h23M6.25 18.8v2.35M12 18.8v2.35M17.75 18.8v2.35M3.4 21.15v2.35M9.1 21.15v2.35M14.9 21.15v2.35M20.6 21.15v2.35" stroke="#C9C4BC" stroke-width=".55" fill="none"/><ellipse cx="7.6" cy="18.9" rx="2.5" ry="1.7" fill="#111"/><ellipse cx="16.4" cy="18.9" rx="2.5" ry="1.7" fill="#111"/></svg>{site.name}</a>
     <ul>
       {nav.map((n) => <li><a href={n.href} aria-current={current(n.href)}>{n.label}</a></li>)}
     </ul>
