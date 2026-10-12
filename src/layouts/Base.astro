@@ -4,19 +4,20 @@ import { site, lab } from '../data/site';
 
 interface Props { title?: string; description?: string; contact?: boolean }
 const { title, description = site.description, contact = true } = Astro.props;
-const fullTitle = title ? `${title} · ${site.name}` : `${site.name} · Data, DPI and AI for public health`;
+const fullTitle = title ? `${title} · ${site.name}` : `${site.name} · Portfolio`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL('/og.png', Astro.site);
 const path = Astro.url.pathname;
 
 // Case studies and articles share one section (/work/); article pages stay under /writing/.
 const nav = [
+  { href: '/', label: 'Home' },
   { href: '/work/', label: 'Work & Writing' },
   ...(lab.length ? [{ href: '/lab/', label: 'Lab' }] : []),
   { href: '/publications/', label: 'Publications' },
   { href: '/about/', label: 'About' },
 ];
-const current = (href: string) => (path.startsWith(href) || (href === '/work/' && path.startsWith('/writing/')) ? 'page' : undefined);
+const current = (href: string) => ((href === '/' ? path === '/' : path.startsWith(href)) || (href === '/work/' && path.startsWith('/writing/')) ? 'page' : undefined);
 ---
 <!doctype html>
 <html lang="en-IN">
@@ -79,12 +80,12 @@ const current = (href: string) => (path.startsWith(href) || (href === '/work/' &
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="eyebrow">Contact</div>
-    <h2>Building something for <span>public health?</span> Let's talk.</h2>
+    <h2>Interested in <span>collaborating?</span> Let's talk.</h2>
     <div class="contact-row">
       <span class="email" id="email">{site.email}</span>
       <button class="copy" id="copy" type="button">Copy email</button>
       <div class="links">
-        <a href={`mailto:${site.email}?subject=CV%20request`}>CV on request ↗</a>
+        <a id="cv" href={`mailto:${site.email}?subject=CV%20request`}>CV on request ↗</a>
         {site.linkedin && <a href={site.linkedin} target="_blank" rel="noopener">LinkedIn ↗</a>}
       </div>
     </div>

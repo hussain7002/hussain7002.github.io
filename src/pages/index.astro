@@ -19,9 +19,8 @@ const homeArticles = (published.filter((a) => a.data.featured).length ? publishe
   <canvas id="field" aria-hidden="true"></canvas>
   <div class="wrap">
     <div>
-      <div class="eyebrow">Digital public infrastructure · Data &amp; AI · Public health</div>
-      <h1>Public health runs on <span class="hl">data.</span> <span class="c-blue">I build the systems that carry it.</span></h1>
-      <p class="lede">IIT Kharagpur engineer. Data strategist to India's <strong>National Urban Health Mission</strong> for the Asian Development Bank, and Senior Consultant at Deloitte; before that, nearly four years at PATH. I turn government data, digital public infrastructure and AI into services that reach people.</p>
+      <div class="eyebrow">Hussain MS · Portfolio</div>
+      <h1>Digital development and <span class="hl">public health.</span></h1>
       <div class="actions">
         <a class="btn primary" href="/work/">See work &amp; writing <span aria-hidden="true">→</span></a>
         <a class="btn ghost" href="/about/">About me</a>
@@ -30,75 +29,44 @@ const homeArticles = (published.filter((a) => a.data.featured).length ? publishe
   </div>
 </header>
 
-<section class="figures" aria-label="Impact in numbers">
+<section class="sec pubs-sec" id="publications">
   <div class="wrap">
-    <div class="eyebrow">At a glance</div>
-    <div class="fig-grid">
-      <div class="fig rv"><div class="n">500M+</div><p>Urban residents covered by the mission I advise</p></div>
-      <div class="fig rv"><div class="n">35</div><p>States and UTs whose health-portal data I analyse</p></div>
-      <div class="fig rv"><div class="n">2→15%</div><p>Pregnancies identified as high-risk, after a screening redesign</p></div>
-      <div class="fig rv"><div class="n">~300</div><p>Health facilities on a platform I led end to end</p></div>
-    </div>
+    <div class="sec-head"><div><div class="eyebrow">Publications</div><h2>Institutional publications</h2></div><a class="see-all" href="/publications/">All publications →</a></div>
+    <PubList compact />
   </div>
 </section>
 
-<section class="about-teaser" id="about">
-  <div class="wrap">
-    <div>
-      <div class="eyebrow">About</div>
-      <h2>Hussain</h2>
-      <p>I studied biotechnology and biochemical engineering at IIT Kharagpur, then spent nearly five years inside India's public health system: in maternal health programmes, hospital oxygen, state health departments and now a national mission. Off work, it's football, taekwondo and theatre.</p>
-      <a class="see-all" style="--c:var(--yellow);margin-top:24px" href="/about/">More about me →</a>
-    </div>
-    <ul class="creds">
-      <li><div><b>IIT Kharagpur</b><span class="sub">B.Tech + M.Tech dual degree, Biotechnology &amp; Biochemical Engineering</span></div><span>2016–21</span></li>
-      <li><div><b>GATE 2020</b><span class="sub">All India Rank 209</span></div><span>AIR 209</span></li>
-      <li><div><b>JEE Main 2016</b><span class="sub">All India Rank 256</span></div><span>AIR 256</span></li>
-    </ul>
-  </div>
-</section>
-
-<section class="practice-intro" id="practice">
-  <div class="wrap">
-    <div><div class="eyebrow">Practice</div><h2>Four kinds of work. One test: does it reach the person?</h2></div>
-    <p>Health is the proving ground; the methods travel. Each engagement moves between the frontline and the national plan, and from a specification to a working prototype.</p>
-  </div>
+<section class="areas-intro" id="areas">
+  <div class="wrap"><div class="eyebrow">Practice</div><h2>Areas of work</h2></div>
 </section>
 
 <div class="bands">
   <section class="band b1"><div class="wrap">
-    <div class="idx">STRATEGY</div>
-    <div class="body"><h3>Data strategy for national programmes</h3><p>Turning fragmented portal data into decisions for mission leadership: facilities, workforce, drugs, diagnostics, teleconsultation and spend, read together.</p></div>
-    <div class="proof"><div class="k">$300M</div><div class="cap">ADB results-based loan for urban primary health care</div><ul><li>National Urban Health Mission, MoHFW</li><li>State digital transformation roadmap</li></ul></div>
+    <div class="idx">01 · DATA</div>
+    <div class="body"><h3>Data-driven strategy</h3><p>Reading data from programme portals and field systems together, so national and state teams can see where to act and track what changes.</p></div>
   </div></section>
   <section class="band b2"><div class="wrap">
-    <div class="idx">PRODUCT</div>
-    <div class="body"><h3>Digital products and public infrastructure</h3><p>Specifications, user journeys, UAT and security audits for government platforms, and QR-based registration on digital health IDs for paperless hospitals.</p></div>
-    <div class="proof"><div class="k">~300</div><div class="cap">Facilities on the Chhattisgarh assessment and citizen-feedback platform</div><ul><li>Maternal health dashboard, two portals in one view</li><li>NUHM dashboard prototype</li></ul></div>
+    <div class="idx">02 · DPI</div>
+    <div class="body"><h3>Digital public infrastructure</h3><p>Shared building blocks such as digital IDs, registries and data standards, and the governance that lets public services build on them.</p></div>
   </div></section>
   <section class="band b3"><div class="wrap">
-    <div class="idx">GEOSPATIAL</div>
-    <div class="body"><h3>Mapping who is left out</h3><p>GIS tools that map urban vulnerability down to wards, slums and households, so medical officers can plan facilities, camps and outreach where need is greatest.</p></div>
-    <div class="proof"><div class="k">Ward-level</div><div class="cap">Planning resolution for state teams in Tripura</div><ul><li>Slum and household layers</li><li>Trained state teams and medical officers</li></ul></div>
+    <div class="idx">03 · PRODUCT</div>
+    <div class="body"><h3>Digital product development</h3><p>Public-sector platforms taken from requirements and user journeys through testing to launch, with the people who will use them.</p></div>
   </div></section>
   <section class="band b4"><div class="wrap">
-    <div class="idx">AI</div>
-    <div class="body"><h3>AI in frontline public services</h3><p>Conversational tools for the people who keep the system running, and a critical eye on which AI and health technologies are ready for public use.</p></div>
-    <div class="proof"><div class="k">40+</div><div class="cap">Medtech and digital health innovations evaluated for public health adoption</div><ul><li>OxyChat: multilingual WhatsApp chatbot, 500+ users</li><li>OPD queue assistant: product design</li><li>AI-assisted NUHM dashboard prototype</li></ul></div>
+    <div class="idx">04 · GEOSPATIAL</div>
+    <div class="body"><h3>GIS and geospatial tools</h3><p>Mapping need down to wards, slums and households, so teams can plan facilities and outreach where they matter most.</p></div>
+  </div></section>
+  <section class="band b5"><div class="wrap">
+    <div class="idx">05 · AI</div>
+    <div class="body"><h3>AI for development</h3><p>Practical AI tools for frontline workers and public services, and a careful look at which ones are ready for public use.</p></div>
   </div></section>
 </div>
 <div class="band-end" aria-hidden="true"></div>
 
-<section class="sec pubs-sec" id="publications">
-  <div class="wrap">
-    <div class="sec-head"><div><div class="eyebrow">Publications</div><h2>Institutional reports</h2></div><div class="side"><p>Regional guidance and practice reports for WHO, Deloitte and CII on health data governance, health technology and medical oxygen.</p><a class="see-all" href="/publications/">Publications page →</a></div></div>
-    <PubList />
-  </div>
-</section>
-
 <section class="sec work" id="work">
   <div class="wrap">
-    <div class="sec-head"><div><div class="eyebrow">Work &amp; Writing</div><h2>Selected case studies and articles</h2></div><a class="see-all" href="/work/">All {work.length} case studies and {published.length} articles →</a></div>
+    <div class="sec-head"><div><div class="eyebrow">Work &amp; Writing</div><h2>Selected case studies and articles</h2></div><a class="see-all" href="/work/">All work &amp; writing →</a></div>
     <div class="work-grid">
       {homeWork.map((w) => <CaseCard entry={w} />)}
       {homeArticles.map((a) => <ArticleCard entry={a} />)}

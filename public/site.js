@@ -120,3 +120,10 @@ document.getElementById('copy')?.addEventListener('click', e => {
   const sel=()=>{const s=getSelection(), r=document.createRange(); r.selectNodeContents(el); s.removeAllRanges(); s.addRange(r);};
   try { navigator.clipboard.writeText(el.textContent).then(()=>done('Copied'), ()=>{sel(); done('Selected');}); } catch(_) { sel(); done('Selected'); }
 });
+/* CV link: mailto does nothing without a mail app, so also copy the address and say so */
+document.getElementById('cv')?.addEventListener('click', e => {
+  const a=e.currentTarget, label=a.textContent, email=document.getElementById('email')?.textContent;
+  try { navigator.clipboard?.writeText(email); } catch(_) {}
+  a.textContent='Email copied: write to request my CV';
+  setTimeout(()=>a.textContent=label,3500);
+});

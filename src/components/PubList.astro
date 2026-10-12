@@ -1,7 +1,7 @@
 ---
 import { publications } from '../data/site';
-interface Props { large?: boolean }
-const { large = false } = Astro.props;
+interface Props { large?: boolean; compact?: boolean }
+const { large = false, compact = false } = Astro.props;
 ---
 <div class:list={['pub-grid', { 'pub-grid-lg': large }]}>
   {publications.map((p) => (
@@ -11,7 +11,7 @@ const { large = false } = Astro.props;
       </div>
       <span class="org" style={`--c:var(--${p.tint})`}>{p.org}</span>
       <h3>{p.title}</h3>
-      <p>{p.src}</p>
+      {!compact && <p>{p.src}</p>}
       <span class="more">View publication ↗</span>
     </a>
   ))}
