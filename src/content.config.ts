@@ -33,7 +33,10 @@ const writing = defineCollection({
     title: z.string(),
     summary: z.string(),
     topic: z.enum(['DPI', 'Health data', 'Health systems', 'AI']),
-    date: z.coerce.date(),
+    date: z.coerce.date().optional(),
+    // Year the piece was first written (shown instead of a publish date; articles are revised over time).
+    firstWritten: z.union([z.number(), z.string()]).optional(),
+    keyPoints: z.array(z.string()).optional(),
     minutes: z.number(),
     featured: z.boolean().default(false),
     draft: z.boolean().default(false),

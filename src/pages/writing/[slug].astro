@@ -10,7 +10,6 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const d = entry.data;
 const { Content } = await render(entry);
-const date = d.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
 <Base title={d.title} description={d.summary}>
 <header class="page-head">
@@ -18,18 +17,27 @@ const date = d.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long',
     <a class="crumb" href="/work/#articles">← Work &amp; Writing</a>
     <h1 style="max-width:22ch">{d.title}</h1>
     <p class="lede">{d.summary}</p>
-    <p class="note" style="margin-top:22px">{d.draft && 'DRAFT · '}{d.topic} · {date} · {d.minutes} min read</p>
+    <p class="note" style="margin-top:22px">{d.draft && 'DRAFT · '}{d.topic}{d.firstWritten && ` · First written ${d.firstWritten}`} · {d.minutes} min read</p>
   </div>
 </header>
-{d.image && (
+{d.image ? (
   <div class="wrap">
     <figure class="lead-fig">
       <img src={d.image} alt={d.imageAlt ?? ''} width="1600" height="1000" decoding="async">
       <figcaption>{d.caption}{d.credit && <span class="credit"> {d.creditUrl ? <a href={d.creditUrl} target="_blank" rel="noopener">{d.credit}</a> : d.credit}</span>}</figcaption>
     </figure>
   </div>
+) : (
+  <div class="wrap">
+    <figure class="lead-fig lead-placeholder" aria-hidden="true"><span>Image coming soon</span></figure>
+  </div>
 )}
 <section class="sec">
-  <div class="wrap"><article class="prose" style="--c:var(--red)"><Content /></article></div>
+  <div class="wrap"><article class="prose" style="--c:var(--red)">
+    {d.keyPoints && d.keyPoints.length > 0 && (
+      <div class="key-points"><p><strong>Key points</strong></p><ul>{d.keyPoints.map((k) => <li>{k}</li>)}</ul></div>
+    )}
+    <Content />
+  </article></div>
 </section>
 </Base>

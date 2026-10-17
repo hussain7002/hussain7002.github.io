@@ -12,7 +12,7 @@ export async function getArticles() {
   return all.sort((a, b) =>
     Number(a.data.draft) - Number(b.data.draft) ||
     Number(b.data.featured) - Number(a.data.featured) ||
-    +b.data.date - +a.data.date ||
+    +(b.data.date ?? 0) - +(a.data.date ?? 0) ||
     a.data.title.localeCompare(b.data.title));
 }
 

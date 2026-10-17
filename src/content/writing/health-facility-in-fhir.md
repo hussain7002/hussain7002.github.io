@@ -1,111 +1,93 @@
 ---
-title: "One health facility, written in FHIR"
-summary: "A plain-language walk through FHIR, the standard behind modern health data exchange, using the simplest possible example: a primary health centre. What the standard fixes, and what it cannot."
+title: "HL7 FHIR, explained by someone still learning it"
+summary: "What HL7 and FHIR actually are, what 'FHIR adoption' means, and where the standard fits in public health, written from the point of view of a practitioner working it out."
 topic: "Health data"
-date: 2026-10-11
-minutes: 6
+minutes: 9
 featured: false
 draft: false
+keyPoints:
+  - "HL7 is the organisation and family of standards for exchanging health information. FHIR is its newest standard, built from small building blocks called resources."
+  - "Choosing FHIR is the easy part. Recent assessments of India and Sri Lanka found strong national foundations, but ecosystem-wide adoption still at an early stage."
+  - "For public health, FHIR matters most where records need to move: between facilities, programmes and levels of care. It carries data faithfully, but it cannot make the data right."
+
 image: "/img/writing/health-facility-in-fhir.webp"
 imageAlt: "Diagram of a FHIR Location resource linked to an Organization resource"
 caption: "One facility as two FHIR resources: the place (Location) and the institution (Organization), linked by a reference."
 credit: "Diagram: Hussain MS · illustrative facility"
 ---
 
-FHIR (pronounced "fire") is the standard most new health information systems now use to exchange data, including India's own ABDM, whose health records are built on FHIR profiles. It is mentioned in almost every digital health strategy. It is understood by far fewer people than mention it.
+FHIR appears in almost every digital health strategy I read. It is in national plans, donor proposals and procurement documents, usually in a sentence that says a system "must be FHIR-compliant". For a long time I nodded along without being sure what that meant in practice. So I set out to understand it properly, as a public health practitioner rather than a software engineer. This piece is what I have learned so far, written for anyone else in the same position.
 
-The best way to understand it is to take something simple and write it out. So here is a single primary health centre, described the way a typical government portal stores it, and then the way FHIR would.
+## First, the names
 
-## The facility as a portal row
+**HL7** stands for Health Level Seven. It is both an organisation, HL7 International, a standards body founded in the late 1980s, and a family of standards for exchanging health information between computer systems. The "Level Seven" refers to the seventh layer of a classic model of computer networking: the application layer, where systems exchange meaningful content rather than just bits.
 
-In many systems, a facility is a row in a spreadsheet-like table:
+Over the decades HL7 has produced several generations of standards. Its Version 2 messaging standard is still everywhere in hospitals, quietly moving lab results and admission messages between systems. Later came Version 3 and the Clinical Document Architecture (CDA), which were more rigorous but also harder to implement.
 
-| Facility name | Type | District | Block | Lat | Long | Beds | Phone |
-|---|---|---|---|---|---|---|---|
-| Rampur PHC | PHC | Example District | Rampur | 17.0512 | 79.2671 | 6 | 08XXX-XXXXX |
+**FHIR** (pronounced "fire") stands for Fast Healthcare Interoperability Resources. HL7 describes it simply as "a standard for exchanging healthcare information electronically", one that "aims to simplify implementation without sacrificing information integrity." It was designed using the lessons of the earlier standards, and it can sit alongside them rather than replacing them overnight.
 
-*An illustrative facility, not a real one.*
+## The idea behind FHIR: resources
 
-This works inside one system. The trouble starts when a second system needs to talk about the same facility. It may spell the name differently, use its own code, use "Primary Health Centre" instead of "PHC", or store the district as a number. The row has no agreed meaning outside the system that made it.
+The idea I found most helpful is this. FHIR breaks health information into small, standard building blocks called **resources**. In HL7's own words, "all exchangeable content is defined as a resource."
 
-## The same facility in FHIR
+There is a resource for a Patient, a Practitioner, an Organization, a Location, an Encounter (a visit), an Observation (such as a blood pressure reading or a lab result), a MedicationRequest (a prescription), an Immunization, and many more. Each resource has a defined structure, so a blood pressure reading means the same thing to every system that reads it. Resources can point to each other: an Observation refers to the Patient it is about and the Encounter where it was taken.
 
-FHIR breaks health information into **resources**: standard building blocks such as Patient, Practitioner, Observation, Organization and Location. Each has a defined structure and meaning, wherever it is used. A facility is usually described by two of them:
+FHIR is also built the way modern web applications are. Resources can be exchanged in familiar formats such as JSON, and systems can ask for them over the web, in much the same way a phone app asks a server for information. That is a large part of why developers find it easier than the earlier standards.
 
-- **Organization:** the entity that provides care (the PHC as an institution).
-- **Location:** the physical place where care happens (the building, with its address and coordinates).
+## A small example: one health facility
 
-Here is the Location:
+It helped me to take something simple and write it out. In many government systems, a primary health centre is just a row in a table: a name, a type, a district, coordinates and a phone number. That works inside one system. The trouble starts when a second system needs to refer to the same facility. It may spell the name differently ("Rampur PHC", "PHC Rampur"), use its own code, or store the district as a number.
+
+In FHIR, the same facility becomes a Location resource (the physical place) linked to an Organization resource (the institution). In simplified form:
 
 ```json
 {
   "resourceType": "Location",
-  "id": "rampur-phc",
-  "identifier": [{
-    "system": "https://facility.ndhm.gov.in",
-    "value": "IN0000000000"
-  }],
-  "status": "active",
+  "identifier": [{ "system": "<national facility registry>", "value": "<facility ID>" }],
   "name": "Primary Health Centre, Rampur",
   "alias": ["Rampur PHC", "PHC Rampur"],
-  "type": [{
-    "coding": [{
-      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-      "code": "HOSP",
-      "display": "Hospital"
-    }],
-    "text": "Primary Health Centre"
-  }],
-  "telecom": [{ "system": "phone", "value": "08XXX-XXXXX" }],
-  "address": {
-    "district": "Example District",
-    "state": "Example State",
-    "country": "IN",
-    "text": "Rampur Block"
-  },
-  "position": { "latitude": 17.0512, "longitude": 79.2671 },
-  "managingOrganization": { "reference": "Organization/rampur-phc-org" }
+  "position": { "latitude": 17.05, "longitude": 79.27 },
+  "managingOrganization": { "reference": "Organization/rampur-phc" }
 }
 ```
 
-*The identifier is a placeholder in the format of a facility registry ID. The type code is a generic example; a national profile would define a proper code for "Primary Health Centre".*
+*An illustrative facility, not a real one.*
 
-## What changed
+Two details make all the difference. The identifier says *whose* identifier it is, here a national facility registry, so any system knows which list to check. And names are separated from identity: the aliases are recorded, but the facility is known by its ID. If every system describes facilities this way and uses the same registry, a third system can combine their data without guessing.
 
-Four things are different from the portal row, and each matters:
+## What "FHIR adoption" means
 
-1. **The identifier has a namespace.** The `system` says *whose* identifier this is: here, the national facility registry. Any system that sees this ID knows exactly which register to check. This is the single most important line in the resource.
-2. **Names are separated from identity.** The official name, and the aliases people actually use, are recorded, but the facility is identified by its ID, not its name. "Rampur PHC" and "PHC Rampur" stop being two facilities.
-3. **Types are coded.** The facility type comes from a shared code list, so a machine can tell that two systems mean the same kind of facility, even if they write it differently.
-4. **Relationships are explicit.** `managingOrganization` points to the Organization resource, just as a relational database links a table to another with a key. The building and the institution are connected, but not confused.
+This was the part I most wanted to understand. A country cannot simply "adopt FHIR" the way it adopts a new form. FHIR is a general framework. To use it, a country has to decide which resources it needs, which fields are mandatory, which code lists to use and how systems will exchange data. These decisions are written down in an **implementation guide**, which adapts FHIR to a national context. Adoption then means systems actually conforming to that guide, being tested against it, and exchanging data with each other in real use.
 
-If two systems both describe facilities this way, and both use the national registry ID, a third system can combine their data without guessing. That is what interoperability looks like in practice.
+India has done a great deal of this foundational work. The FHIR Implementation Guide for ABDM, published by the National Resource Centre for EHR Standards, is based on FHIR Release 4 and, in its own words, "defines the minimum conformance requirements for accessing health data to achieve continuity of care in the Indian context." It defines profiles for records such as prescriptions, discharge summaries, diagnostic reports, immunisation records and outpatient consultation notes.
 
-## What FHIR does not fix
+But a published guide is the beginning, not the end. Two recent assessments led by Karthik Adapa and colleagues looked at how far adoption had actually gone, in India and in Sri Lanka. Both are preprints, not yet peer-reviewed, but their findings are strikingly similar.
 
-This is where I want to be honest, because FHIR is often oversold.
+For **India**, the authors found a "mandate-driven national foundation" for FHIR-based exchange, including national implementation guides, sandbox environments and a growing ecosystem of certified vendors. But adoption across the wider ecosystem remained "uneven and largely compliance-driven". Most organisations they surveyed placed themselves at exploration or limited-pilot stages, and lack of funding or business incentives was among the top barriers for nearly two-thirds of respondents. Their conclusion was that the central challenge is moving beyond compliance, so that implementers can validate, trust and use FHIR as shared infrastructure.
 
-- **FHIR does not make the data correct.** If the coordinates are wrong or the facility closed last year, the FHIR version is wrong too, in a better format.
-- **FHIR does not create the master list.** Someone has to maintain the facility registry, assign IDs, and close, merge and update records. That is governance, not a standard.
-- **FHIR does not agree definitions for you.** The standard says *how* to write a code. It does not decide which code list a country uses for facility types, or what counts as a "PHC". Countries do that through national **profiles** and terminology decisions, as ABDM does through its published FHIR profiles.
-- **FHIR does not change the old systems.** Existing portals still store their rows. Mapping them to FHIR, and keeping the mapping right as they change, is ongoing work.
+For **Sri Lanka**, which has formally adopted FHIR Release 4 as its preferred national interoperability standard, the authors found real foundations: national implementation guides, governance structures, testing events known as connectathons, and pilots demonstrating FHIR-enabled exchange. But overall interoperability maturity was assessed as nascent, and the main challenge, they concluded, is "no longer the selection of standards alone, but their institutionalization."
 
-So FHIR is necessary but not sufficient. It is the common language. The shared registry, the agreed definitions and the people who maintain them are what give the language something true to say. I wrote more about that in [Interoperability is not a solution](/writing/interoperability-is-not-a-solution/).
+Reading the two together, I took away one simple idea. **Choosing FHIR is the easy part. Making it the normal way systems work, through governance, testing, incentives, skills and procurement, is the hard part.**
 
-## Try it yourself
+## Where FHIR fits in public health
 
-If you work with health facility data, try this exercise with one record from your own system:
+So where does this leave someone working in public health rather than hospital IT?
 
-1. Which ID would you put in `identifier`, and whose namespace is it?
-2. Which of your fields map cleanly to FHIR, and which have no obvious home?
-3. Where would a second system's version of the same facility disagree with yours?
+FHIR matters most where **records need to move**: a woman's antenatal records following her from the sub-centre to the district hospital, a child's immunisation history moving with a family that migrates for work, a lab result reaching the clinician and the surveillance system at the same time. In each case, the value comes from systems agreeing on what a record looks like.
 
-Answering those three questions for one facility tells you more about your interoperability readiness than any assessment form.
+WHO is building in the same direction. Its SMART Guidelines, "Standards-based, Machine-readable, Adaptive, Requirements-based, and Testable", aim to turn its health recommendations into digital components that countries can adapt, and some of that work is published as FHIR implementation guides.
 
-*Views are my own. The example facility is illustrative.*
+FHIR matters less for the monthly aggregate reports that much public health monitoring still depends on, where other tools and standards are often used. And there is one thing it can never do: make the data right. A FHIR message will carry a wrong identifier or a locally defined indicator just as faithfully as a correct one. Standards make agreement possible. People and institutions still have to reach it.
+
+## Where I have landed
+
+I started out thinking of FHIR as a technical requirement to tick. I now think of it more like a shared language. Learning the grammar is the easy part. The real work is getting a whole health system, including vendors, hospitals, programmes and governments, to speak it every day, and to trust what they hear.
+
+*Views are my own. I am still learning; corrections are welcome.*
 
 ## Sources
-
-- [HL7 FHIR R4, Location resource](https://hl7.org/fhir/R4/location.html)
-- [HL7 FHIR R4, Organization resource](https://hl7.org/fhir/R4/organization.html)
-- [Ayushman Bharat Digital Mission](https://abdm.gov.in/)
+- [HL7 International, FHIR Overview](https://hl7.org/fhir/overview.html)
+- [National Resource Centre for EHR Standards, FHIR Implementation Guide for ABDM](https://nrces.in/ndhm/fhir/r4/index.html)
+- [Jain A., Kumar S., Vishwanath P., Garg M., Adapa K. From compliance to ecosystem adoption: a mixed-methods assessment of HL7 FHIR implementation in India. Preprints.org, 2026 (not peer-reviewed)](https://doi.org/10.20944/preprints202606.1791.v1)
+- [Irfaan S., Hapudeniya M., De Silva M., Wijeratna M., Sethi R., Chauhan T., Adapa K. HL7 FHIR adoption and interoperability maturity in Sri Lanka: a mixed-methods national baseline assessment. Preprints.org, 2026 (not peer-reviewed)](https://doi.org/10.20944/preprints202606.1768.v1)
+- [WHO, SMART Guidelines](https://www.who.int/teams/digital-health-and-innovation/smart-guidelines)

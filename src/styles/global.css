@@ -337,3 +337,13 @@ footer .disclaimer{flex-basis:100%;font-family:var(--sans);font-size:13px;line-h
 /* use more of very wide screens; article text keeps its readable measure */
 @media (min-width:1600px){:root{--maxw:1360px}}
 @media (min-width:2200px){:root{--maxw:1520px}}
+
+/* article: image placeholder, interactive charts, body images, key points */
+.lead-placeholder{display:grid;place-items:center;aspect-ratio:16/7;border-radius:16px;border:1.5px dashed color-mix(in srgb,var(--ink) 18%,transparent);background:var(--paper-2)}
+.lead-placeholder span{font-family:var(--label);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.prose figure.chart{margin:1.8em 0}
+.prose figure.chart iframe{display:block;width:100%;border:0;border-radius:12px;background:var(--paper)}
+.prose figure.chart figcaption,.prose img + em{display:block;margin-top:8px;font-size:14px;line-height:1.5;color:var(--muted)}
+.prose img{display:block;max-width:100%;height:auto;border-radius:12px;border:1px solid var(--rule)}
+.key-points{padding:18px 22px;border-radius:14px;background:var(--paper-2)}
+.key-points ul{margin:.4em 0 0}

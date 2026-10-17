@@ -1,79 +1,114 @@
 ---
-title: "The world's finest tea comes from where mothers die most"
-summary: "Assam's tea is poured in the best hotels in the world. The women who pick it have faced some of the highest risks of dying in childbirth anywhere in India. On history, work, salt, floods and what it takes to reach them."
+title: "The women behind Assam's tea"
+summary: "Assam grows some of the world's finest tea, and the women who pluck it have faced some of India's highest risks in childbirth. On the land, the history, the evidence, and what USAID's Saksham project did at every level of the health system."
 topic: "Health systems"
-date: 2026-10-11
-minutes: 9
+minutes: 14
 featured: true
 draft: false
+keyPoints:
+  - "Tea in Assam is plucked by women, paid by the day and by output. Their communities were brought to the gardens from central and eastern India in the nineteenth century."
+  - "Maternal mortality in Assam has been among the highest in India, and highest of all in Upper Assam, where most tea gardens are. Anaemia and high blood pressure are common in garden communities."
+  - "USAID's Saksham project worked at every level, from village health committees and tea garden hospitals to district forums and state review, to bring the health system closer to these women."
 image: "/img/writing/tea-gardens-maternal-mortality.webp"
 imageAlt: "Close-up of tea bushes under shade trees in an Assam tea garden"
-caption: "A tea garden in Assam. The state grows about half of India's tea."
+caption: "A tea garden in Assam."
 credit: "Photo: Bidyut Gogoi, CC BY 2.0, via Wikimedia Commons"
 creditUrl: "https://commons.wikimedia.org/wiki/File:Tea_garden_-_Assam.jpg"
 ---
 
-Somewhere this morning, in a hotel in London or Dubai or Tokyo, someone is pouring a cup of breakfast tea. It is strong and malty and dark, the kind of tea that stands up to milk. There is a good chance it came from Assam, which grows about half of India's tea. The finest Assam leaves are sold at auction for tens of thousands of rupees a kilogram.
+## The land and the leaf
 
-That tea was almost certainly plucked by a woman. She probably started before eight, bent over the bushes with a basket on her back, and was paid by the kilogram. And for most of the last century and a half, if she became pregnant, she faced one of the highest risks of dying in childbirth of any woman in India.
+Fly into Dibrugarh in the monsoon and the land below is green in every direction: low, flat and wet, with the Brahmaputra spreading across the valley in braided channels. The tea gardens are laid out in neat rows under tall shade trees, mile after mile, edged by paddy fields and villages.
 
-This is a piece about her.
+This valley is one of the few places in the world with a tea plant of its own. The Assam variety of the tea plant grows naturally in its warm, humid lowlands, and the heavy rain and heat of the summer give its leaf a strength that tea from the hills does not have. Assam tea is strong, malty and dark, the kind that stands up to milk. The summer pluck, known as the second flush and prized for its golden-tipped leaves, sells at auction for some of the highest prices in the tea world. Assam grows around half of India's tea, and you have very probably drunk some of it, perhaps in a hotel breakfast tea in London, Dubai or Tokyo.
 
-## How the gardens were peopled
+## The women who pluck it
 
-Tea was found growing wild in Assam in the 1820s, and within two decades the British had begun clearing jungle for plantations. They needed labour, far more than the region could supply. So from the middle of the nineteenth century, recruiters brought hundreds of thousands of people, mostly Adivasi communities from the Chota Nagpur plateau and the surrounding regions of what are now Jharkhand, Odisha, Chhattisgarh and West Bengal, to the gardens, often on contracts that bound them for years. Many died on the journey or in the first years, of disease and of conditions in the camps.
+That tea was plucked by a woman. In Assam's tea gardens, plucking is women's work. Women move along the rows from early morning with baskets on their backs, picking the top two leaves and a bud, paid a daily wage tied to how much they pick. The daily wage in the Brahmaputra valley stood at ₹250 until early 2026.
 
-Their descendants are still there. Today they are often called the tea tribes, or tea garden communities, and they make up a large share of Assam's population. Many still live inside the gardens, in labour lines built by the estates, dependent on the estate for their housing, their water, their ration and their hospital. They are in Assam but often apart from it: separated by language, by history, by the fences of the estates, and in many cases, still, by literacy and by documents.
+And for much of the last century and a half, if she became pregnant, she faced some of the highest risks of dying in childbirth of any woman in India.
 
-## What pregnancy looks like in a garden
+This piece is about her, and about a project that taught me a great deal about what it takes to reach her: USAID's Saksham, on which I worked. I have tried to write it as a public health practitioner would, with the history, the evidence and the work, rather than as a tragedy. The women of the tea gardens are not victims in a story. They are citizens whom the health system has historically found hard to reach, and that is a problem with solutions.
 
-Tea plucking is women's work in Assam, and it is paid by output. A woman who stops plucking stops earning. For a family that lives on one of the lowest statutory wages in the country, a pregnancy is a cost before it is anything else. So women keep working: in the heat, in the rains, bending for hours, often well into the last weeks of pregnancy.
+## How the gardens began
 
-Many factors stack up against them:
+Tea was found growing wild in Assam in the 1820s, and within two decades commercial plantations were being cleared from the forest. They needed labour on a scale the region could not supply. From the middle of the nineteenth century, recruiters brought hundreds of thousands of people to the gardens, mostly Adivasi and other communities from the Chota Nagpur plateau and the surrounding regions of what are now Jharkhand, Odisha, Chhattisgarh and West Bengal. Many came on contracts that bound them to an estate for years. Many did not survive the journey or the first years in the camps.
 
-- **Anaemia** is widespread, and severe anaemia makes bleeding after birth far more dangerous.
-- **Salt.** Tea garden communities traditionally drink tea with salt, sometimes many cups a day. High salt intake is linked to high blood pressure, and high blood pressure in pregnancy can become pre-eclampsia and eclampsia, among the leading causes of maternal death.
-- **Distance and water.** Gardens can be far from a hospital that can manage an emergency, and the Brahmaputra floods every monsoon, cutting roads for days or weeks.
-- **Alcohol and violence.** Alcohol use is common in many garden communities, and with it, domestic violence. Both make pregnancy more dangerous.
-- **Low literacy and missing documents.** Many women cannot easily read the forms or produce the papers that government schemes demand.
-- **Late care.** Many women registered their pregnancy late, or not at all, and so missed the check-ups where risks are found early.
+## A century and a half later
 
-For years, studies estimated maternal mortality in Assam's tea gardens well above the state's own average, and Assam's average was among the highest in India.
+Their descendants are still there. Today they are often called the tea tribes or tea garden communities, and they make up a large share of Assam's population. Over five or six generations, they have built their own culture, languages and festivals, an identity that blends where they came from with where they now live.
 
-## The scheme that did not reach
+The law around them has changed too. The Plantations Labour Act, 1951 requires every plantation to provide and maintain medical facilities for its workers and their families, along with housing and other amenities. In Assam, this is why larger estates run their own **tea garden hospital** inside the plantation boundary. For many families in the labour lines, that hospital is the nearest source of care, and it is part of the health system in practice even when it sits outside the government's own network.
 
-The state saw the problem. Assam created a **Wage Compensation Scheme** for pregnant women in the tea gardens: money to replace the wages a woman loses so that she can rest and seek care. It was exactly the right idea. It addressed the reason women kept working.
+Much has also stayed the same. Many families still live inside the gardens and depend on the estate for housing, water and rations. They live in Assam, but often apart from it, separated by the boundaries of the estates, by language and, in many cases, still by literacy and by documents.
 
-But a scheme is only as good as its reach. To claim the money, a woman needed documents many did not have, forms many could not fill, and a bank account that was linked correctly. Applications piled up. Women who were entitled to the money never received it, kept working through their pregnancies, and in some cases died.
+## What daily life asks of a woman
 
-## What it took
+For a family living on a plantation wage, a pregnancy is an economic cost before it is anything else. A woman who stops plucking stops earning, so many women keep working through pregnancy: in the heat and the rain, bending for hours, often well into the last weeks.
 
-I worked on USAID's Saksham programme, led by PATH, which focused on maternal and newborn health in Assam, Chhattisgarh and Odisha. In Assam, the gardens were the heart of the work. A few things made a difference.
+The evidence on what they face is consistent:
 
-**Asking the frontline workers.** We formed core groups of frontline workers, mostly women themselves, who knew the gardens intimately. They were the ones who identified the wage compensation problem: not that the scheme was wrong, but that women could not get through the paperwork.
+- **High blood pressure.** Researchers at the ICMR's Regional Medical Research Centre in Dibrugarh have reported a high (60.8%) prevalence of hypertension among tea garden workers in Assam. They have identified extra salt eaten as a side dish as a risk factor, and found that the salted tea drunk at work contains about 8–10 grams of salt per litre. High blood pressure in pregnancy can progress to pre-eclampsia and eclampsia, among the leading causes of maternal death.
+- **Anaemia.** In a year-long study of maternal deaths at Assam Medical College in Dibrugarh, two-thirds (66.7%) of the women who died were from the tea garden community, and anaemia was the leading cause of death (29.1%), followed by eclampsia (23.0%).
+- **Distance and water.** Gardens can be far from a hospital that can manage an obstetric emergency, and the Brahmaputra floods every monsoon, cutting roads for days at a time.
+- **Late care and paperwork.** Many women register their pregnancies late, and many find it hard to read forms or produce the documents that schemes and bank accounts require.
 
-**A campaign, not a circular.** The core groups designed a campaign called **MAAdol** to clear the backlog. Working with the district programme management unit and a multi-stakeholder forum, they helped women get their documents, filled in forms, and pushed applications through. The campaign cleared a backlog of beneficiary forms and released **₹89 lakh** in scheme payments.
+## Maternal health
 
-**Bringing everyone to the table.** Health in a tea garden involves the estate management, the garden hospital, the workers' unions, the state health department, the labour department and the district administration. Each controls a piece and none controls the whole. We helped set up multi-stakeholder forums where all of them sat together, regularly, and solved problems that none could solve alone.
+Put these together and the outcome is predictable. In India's Sample Registration System, Assam's maternal mortality ratio was 167 per 100,000 live births in 2019–21, against 93 for India as a whole. In the latest bulletin, for 2021–23, it was 110, against 88 for India. The fall is real, and welcome, but Assam remains well above the national figure.
 
-**Strengthening garden hospitals.** Under India's Plantations Labour Act, large estates must provide hospitals for their workers, and for many women in the gardens these are the first and closest source of care. Improving them improves care for everyone in the lines.
+Within Assam, the burden has been heaviest in Upper Assam, where most of the tea gardens are. A 2017 audit by the Comptroller and Auditor General of India found that maternal mortality in Upper Assam, "predominantly populated with Tea Gardens population", was 404, compared with 301 for the state as a whole. In the six blocks covering tea garden areas that it examined, 38 per cent of maternal deaths were from the tea garden population.
 
-In our intervention areas, **early antenatal care registration rose by 25%**: more women were coming into care early enough for risks to be found and managed. Over the same period, Assam's maternal mortality ratio fell steeply. That is a statewide figure with many causes, and I do not claim it for any single project, but it shows what is possible when the system turns its attention to the women it had missed.
+The state government has long recognised the particular situation of women in the gardens. Under the Wage Compensation Scheme, launched on 1 October 2018, the National Health Mission, Assam provides "a cash benefit of Rupees 15,000" to each eligible pregnant woman of the tea garden areas, in four instalments, to "provide better health and nutrition to the Pregnant Women of the Tea Garden Areas." It addresses exactly the reason women keep working. But like any scheme, it works only if it reaches the women it was designed for.
 
-## What still needs fixing
+## What we did, level by level
 
-- **Documents should not stand between a pregnant woman and her entitlement.** Schemes for the poorest must be designed for people without papers, not around them.
-- **The estates and the state must share responsibility.** Garden hospitals are part of the health system in practice and should be part of it in data, quality standards and referral.
-- **Wages are health policy.** As long as a pregnant woman loses her income by resting, she will keep working, whatever the health system says.
-- **Salt, anaemia and blood pressure deserve garden-specific campaigns,** designed with the communities and in their languages, not imported from elsewhere.
+While it was operating in India, USAID recognised the tea gardens of Assam as a region where focused investment could make a real difference. Saksham was a four-year (2021–25) maternal, newborn and child health project funded by USAID and led by PATH, with Jhpiego, Piramal Swasthya and Deloitte as partners. It worked in vulnerable districts of Assam, Chhattisgarh and Odisha, and one of its three objectives focused specifically on partnerships with tea garden hospitals in Assam. What I came to admire most about it was that it did not pick a single fix. It worked at every level of the health system at once, because the problems of the gardens exist at every level.
+
+### In the community
+
+The work started with the people closest to the women. Saksham formed **core groups of frontline workers**, ASHAs, ASHA supervisors and ANMs, many of them women from the same communities. It was one of these core groups that identified why the wage compensation scheme was not reaching women: the scheme was sound, but the forms, documents and bank linkages stood in the way.
+
+They designed a campaign called **MAAdol**. With the district programme management unit and a multi-stakeholder forum, frontline workers, bank staff and health staff went to the women, helped them complete forms, sorted out documents and bank accounts, and pushed applications through. In Golaghat district, the National Health Mission's own posts describe MAAdol as a drive "to make Aadhar enrollment and opening of BankAccount for PregnantWomen of TeaGarden", run jointly by NHM Golaghat and Saksham ([November 2022](https://x.com/GolaghatNhm/status/1588909537217900545)). A later drive at another tea garden combined Aadhaar and bank account opening with counselling on the wage compensation scheme, nutrition and family planning ([November 2023](https://x.com/GolaghatNhm/status/1722692387280154719)). According to Saksham's published compendium, the campaign cleared a backlog of beneficiary forms and processed nearly **₹1 crore** in instalments of the scheme.
+
+The approach spread to other districts. In Lakhimpur, the Saksham team and NHM held an orientation for officials from the labour department, Aadhaar, India Post Payments Bank and health supervisors, covering MAAdol alongside facility assessment, hospital committees and nutrition gardens ([December 2024](https://x.com/NhmLakhimpur/status/1867189093702275542)). That list of participants says a great deal about the work: getting a scheme to a pregnant woman in a tea garden needed health, labour, identity and banking officials in the same room.
+
+Saksham also revived the **Village Health, Sanitation and Nutrition Committees**, community platforms that exist on paper in every village but are often inactive. In model committees across four intervention blocks, members prepared individual birth-preparedness plans for pregnant women and monitored them. In one tea garden in Jorhat, the committee ran an online opinion poll so that everyone in the community could vote on which local issues to tackle first. Another committee, having identified lack of transport as a barrier, arranged an additional vehicle to take pregnant women from the garden to the nearest health facility. At the same time, Saksham strengthened the supportive supervision of ASHAs, and its **Saarthi** platform digitally linked women registered in the community to their nearest health facility, so that high-risk pregnancies could be identified, referred and followed up.
+
+### In facilities
+
+For many women in the gardens, the **tea garden hospital** is the closest source of care. Saksham worked with the hospital management committees of tea garden hospitals run under public-private partnership in Dibrugarh, Golaghat, Jorhat and Sivasagar districts. It mapped the hospitals, reviewed the committees, and helped reconstitute them and hold regular meetings. The resulting decisions were practical and visible: labour rooms renovated, suction machines and an autoclave bought, a defunct newborn radiant warmer brought back into use, biomedical waste pits built. Saksham also worked with tea garden hospitals on structured **self-assessment** of their quality of care.
+
+In public facilities, Saksham supported mentoring and skills practice for providers, including obstetric drills and skills labs in medical colleges, and an **e-SUMAN** model that digitised facility checklists and strengthened feedback from the women who used the services.
+
+### In the district
+
+Health in a tea garden involves the estate management, the garden hospital, workers' representatives, the health department, the labour department and the district administration. Each controls a piece and none controls the whole. Saksham's **Sangathan** model set up **multi-stakeholder forums** that brought them together regularly to identify and resolve issues specific to the gardens, problems that none of them could solve alone. Saksham also strengthened district task forces for maternal and child health, supported facilities towards national quality certification, and provided **dashboards** for district review. Mobile medical units serving the tea garden areas received technical support too.
+
+### In the state
+
+At state level, Saksham supported a state technical advisory group to discuss maternal and child health service delivery, with a dashboard to track performance and service quality across levels. Its **Aavishkar** innovation challenge looked for technologies, including point-of-care diagnostics, that could help screen and refer high-risk pregnancies. I led the work that brought those innovations together in the Saksham Aavishkar Compendium.
+
+In Saksham's intervention areas, **early registration for antenatal care rose by 25%**: more women were entering care early enough for risks to be found and managed.
+
+
+## What I carry from it
+
+I learned more on Saksham than on almost anything else I have worked on, and much of it was not technical. I learned that the people closest to a problem usually understand it best, and that the most useful thing a project can do is give them room and support to act. I learned that a good government scheme and a woman who needs it can be separated by a single form, and that closing that gap is real public health work. And I learned that a health system is not one institution but many, such as an estate hospital, a district office, a village committee and a bank branch, and that progress often comes from simply getting them into the same room.
 
 ## The cup
 
-None of this is a reason to stop drinking Assam tea. The gardens are where these families live and work, and the industry is their livelihood. But it is a reason to remember, when the cup is poured, who made it possible, and to ask that the price of the finest tea in the world include a safe birth for the woman who picked it.
+None of this is a reason to stop drinking Assam tea. The gardens are where these families live and work, and the industry is their livelihood. It is a reason to remember, when the cup is poured, who made it possible, and to hope that the price of the finest tea in the world comes to include a safe birth for the woman who picked it.
 
-*Views are my own. Project results refer to Saksham intervention areas; the MAAdol figures are from the public Saksham MNCH Aavishkar compendium (PATH/USAID).*
+*Views are my own. Project results refer to Saksham intervention areas and are taken from published PATH and Saksham material.*
 
 ## Sources
-
-- [Saksham MNCH Aavishkar Challenge: A compendium of transformative solutions](https://media.path.org/documents/Saksham_Avishkar_Compendium_-_16April.pdf) (PATH / USAID)
+- Office of the Registrar General, India. *Special Bulletin on Maternal Mortality in India 2019–21* (May 2025) and *2021–23* (September 2025). Sample Registration System. [censusindia.gov.in](https://censusindia.gov.in/nada/index.php/catalog/46177)
+- [Comptroller and Auditor General of India. Report No. 4 of 2017: Impact of National Rural Health Mission on Reproductive and Child Health in Assam](https://cag.gov.in/en/audit-report/details/33536)
+- [National Health Mission, Assam. Wage Compensation Scheme for pregnant women of tea garden areas](https://nhm.assam.gov.in/taxonomy/term/6786)
+- [Borah P.K. et al. An information, education and communication module to reduce dietary salt intake and blood pressure among tea garden workers of Assam. *Indian Heart Journal* 2018](https://pmc.ncbi.nlm.nih.gov/articles/PMC5993981)
+- [Hazarika L., Phukan P., Sharma A., Das N.K. Maternal mortality at a tertiary care teaching hospital in Dibrugarh district, Assam: a retrospective study. *Int J Community Med Public Health* 2017;4(9)](https://www.ijcmph.com/index.php/ijcmph/article/view/1750)
+- [PATH. Advancing maternal, newborn, and child health in tea plantation and tribal communities in India (2023)](https://www.path.org/our-impact/articles/advancing-maternal-newborn-and-child-health-in-tea-plantation-and-tribal-communities-in-india/)
+- [Saksham MNCH Aavishkar Challenge: A compendium of transformative solutions (PATH / USAID)](https://media.path.org/documents/Saksham_Avishkar_Compendium_-_16April.pdf)
+- The Plantations Labour Act, 1951
 - [Tea Board of India](https://www.teaboard.gov.in/)

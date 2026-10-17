@@ -1,77 +1,127 @@
 ---
-title: "A day in 2040, when nobody talks about health DPI"
-summary: "An essay about a future in which digital public infrastructure for health works so well that it disappears, and what Estonia's X-Road already teaches us about getting there."
+title: "The Museum of Problems We Used to Have"
+summary: "A short piece of science fiction, in homage to Iain M. Banks's Culture, about a civilisation that has forgotten what a health system was. And why people who build health infrastructure should read science fiction."
 topic: "DPI"
-date: 2026-10-11
-minutes: 7
+minutes: 10
 featured: false
 draft: false
-image: "/img/writing/dpi-for-health-2040.webp"
-imageAlt: "Men in a wooden boat crossing floodwater in Assam"
-caption: "Assam floods, August 2012. In the essay, Rupa leaves by boat before the road closes."
-credit: "Photo: EU Civil Protection and Humanitarian Aid, CC BY-SA 2.0, via Wikimedia Commons"
-creditUrl: "https://commons.wikimedia.org/wiki/File:EU_Civil_Protection_and_Humanitarian_Aid,_India_-_Assam_floods,_aug_2012.jpg"
+keyPoints:
+  - "A short story set in a far-future, Culture-like civilisation, where a young woman visits a museum exhibit on something called 'interoperability'."
+  - "Nothing in it is plausible by today's thinking. That is the point: science fiction lets us imagine past the limits of what we currently know how to build."
+  - "Real infrastructure starts small, like Estonia's X-Road, but the imagination behind it does not have to."
 ---
 
-*This is a piece of imagination, not a forecast. The people are invented. The infrastructure is not far away.*
-
-## 5:40 a.m., a village on the Brahmaputra
-
-Rupa is thirty-two weeks pregnant and the river is rising.
-
-She does not know the words "digital public infrastructure". She knows that last night her phone spoke to her in Assamese, in the voice of the ASHA didi she has known since she was a girl, and said that the road to the hospital might close in four days, and that the waiting home near the community health centre has a bed for her from tomorrow. It said her blood pressure readings from last week were fine, and that the boat would come at eight.
-
-She did not fill in a form. She did not carry a file. The waiting home already knows her due date, her blood group and that her first baby came by caesarean. Nobody typed it in again.
-
-## 7:15 a.m., the ASHA's phone
-
-Anjali, the ASHA, has eleven names on her list this morning, sorted by who is closest to the water. The list was not made by a person in an office. It was put together overnight from things that already existed: the flood forecast from the water resources department, the village map, the pregnancy records at the sub-centre, the bed register at the waiting home.
-
-None of those systems belongs to the health department. They do not need to. Each keeps its own data and answers questions from the others, with permission, over the same common rails.
-
-Anjali gets paid on Friday for each woman she helps move before the flood. That payment, too, comes from a record nobody had to re-enter.
-
-## 10:00 a.m., the district office
-
-The district health officer opens nothing. There is no dashboard to open. Her phone shows her three things that need her today: a stock of a blood pressure medicine running low in one block, a doctor's post vacant for ninety days in another, and a waiting home that will be full by Thursday if the rain continues.
-
-She remembers 2026, when a meeting like this one began with forty slides and an argument about whose numbers were right. Now the numbers are simply the numbers. They come from records, not reports.
-
-## 2:30 p.m., the medical college
-
-A team is checking whether an AI model that reads fetal heart traces still works as well as it did when it was approved. They do not have the patients' records, and do not need them. The model goes to the data, not the data to the model. Results come back by region, age and facility type. In one district, performance has slipped since a new monitor was introduced. The vendor is told on the same day.
-
-Every query they ran is logged. Any woman whose trace was used can see, if she wants to, that it was used for a check like this, and by whom.
-
-## 9:00 p.m., Rupa again
-
-At the waiting home, a nurse checks Rupa's blood pressure and it is higher than last week. The obstetrician at the district hospital sees the reading and the trace, and asks for her to be moved before the road closes. Rupa does not know that seven systems were involved in that decision. She knows that someone was watching.
+*What follows is fiction, written in homage to Iain M. Banks's Culture novels. The ship names, people and places are invented.*
 
 ---
 
-## What made this possible
+Ashu Teral-Vensa dam Orrin had decided, at the age of a hundred and twelve, to have a baby the old-fashioned way.
 
-Nothing in this story requires technology that does not exist today. What it requires is something rarer: **rails that everyone uses, and that nobody notices.**
+Not entirely the old-fashioned way. She was not mad. But she wanted to carry it herself, for the full nine months, without the usual adjustments, so she could feel what her ancestors had felt. Her friends thought it was a phase. Her mother thought it was charming.
 
-Estonia built its version of those rails in 2001. It is called **X-Road**, and it is worth understanding because it is so modest. X-Road is not a giant central database. It is a secure way for separate databases, owned by separate agencies, to ask each other questions. The population register keeps people's addresses. The health system keeps medical records. The tax office keeps tax records. None of them hands its data over. Each answers authorised queries, and each query is signed and logged.
+"You know there's a risk," said the Orbital.
 
-Three ideas from X-Road sit underneath my 2040:
+The Orbital was the Mind that ran Pesh Orbital: a ring of land and sea eleven million kilometres around, home to forty billion people, and also, in a sense that nobody found strange, the ring itself. It spoke to Ashu through the neural lace that had grown through her brain when she was a child, so its voice seemed to come from just behind her left ear. It usually used a warm, amused tone, rather like a favourite aunt who happened to be able to rearrange planets.
 
-1. **Data stays where it is born.** Every agency remains responsible for its own data. There is no single central store to fail or to be stolen. This is federated, not centralised.
-2. **Ask once.** Estonia's "once-only" principle means the state should not ask a citizen for information it already has. Rupa never fills in her due date twice.
-3. **People can see who looked.** Estonians can check which official accessed their data and why. Trust is not demanded; it is made visible.
+"What risk?" said Ashu. "You'll be watching."
 
-X-Road is now run jointly with Finland, and its ideas have travelled further. India's own path, through ABDM, already has many of the right pieces: a health ID, registries of facilities and professionals, and a consent framework for sharing records. What remains is the hard part: making every programme, department and private provider actually use the rails, so that they disappear.
+"I am always watching," said the Orbital. "That is rather the point I'm making. You are asking me to watch and not to help. I am trying to be supportive, but I would like you to know that I find this extremely stressful. I have already modelled your pregnancy four hundred million times."
 
-## The measure of success
+"And?"
 
-The best infrastructure is the kind you stop noticing. Nobody thanks the electricity grid when the light comes on, or the payment system when a transfer arrives in a second.
+"And in every single one of them you are fine, because in every single one of them I cheat a little at the end."
 
-In 2040, if we have done this well, no health worker will talk about DPI. They will talk about patients. The district officer will not ask for a dashboard. The woman on the riverbank will not know any of the words in this essay. She will just know that the system knew her, and that someone came in time.
+Ashu laughed. "Don't cheat."
 
-*Views are my own.*
+"I will cheat," said the Orbital, "only if you are about to die. I consider that a reasonable compromise between your sense of authenticity and my sense of responsibility. Also, nobody on this Orbital has died in childbirth for nine thousand years, and I am not going to break that record because you read a historical novel."
 
-## Sources
+---
 
-- [X-Road (Nordic Institute for Interoperability Solutions)](https://x-road.global/)
-- [e-Estonia, X-Road](https://e-estonia.com/solutions/interoperability-services/x-road/)
+The idea had come from the Museum.
+
+On Pesh, the Museum of Problems We Used to Have was mostly visited by children and by drones with a sense of humour. It had a hall for money, which visitors found baffling, and a hall for war, which they found upsetting, and a small, quiet room at the end of a long corridor labelled *Health Systems (Pre-Contact)*.
+
+Ashu had gone in on a whim. The room was laid out like an ancient clinic. There was a desk with a stack of paper forms and a small sign explaining that the forms were for writing down information about a person's body. The same information, the sign said, often had to be written down several times on different forms for different offices, and the offices often could not read each other's forms.
+
+"Why?" Ashu had asked the room.
+
+The room, which was a fragment of the Orbital wearing a curator's voice, said: "Because the forms had been designed separately by people who had never met. They called the problem *interoperability*. It was considered very difficult. There were conferences about it."
+
+"Conferences about forms?"
+
+"Many conferences. Some of them lasted several days."
+
+There was a display of something called a *registry*, which was a list of all the places where a person could go if they were ill. There was a box labelled *consent form* with a pen attached to it by a chain, "so that it would not be stolen", the curator explained. There was a recording of a midwife in a river valley on a long-ago planet, talking about the night a road flooded and an ambulance could not reach a woman in time. Ashu had listened to that one three times.
+
+"And people died of that?" she had said. "Of the road? Of the forms?"
+
+"Of many things," said the curator, gently. "But yes. Sometimes of the forms."
+
+---
+
+On Pesh, nobody filled in a form. The idea that information about your body would need to be *written down* was as strange as the idea of carrying water from a well.
+
+Ashu's body was, in the most ordinary way, looked after all the time. Her glands, the small engineered organs that every Culture citizen was born with, kept her blood chemistry where she liked it and could produce, on request, anything from a mild calm to a three-day burst of mathematical inspiration. The tiny machines in her bloodstream tidied up anything that went wrong before it became noticeable: a stray cancerous cell, a blood clot, a virus picked up from a visiting trader. If she lost an arm, it would grow back in about a month, and the Orbital would offer her a choice of fingernail styles.
+
+All of that generated information. In a strict sense, the Orbital knew everything about her body at every moment, and could have known it for all forty billion people at once without noticing the effort.
+
+But it did not look.
+
+This was the part Ashu had found hardest to explain to the curator, who kept asking polite historical questions about "data protection". On Pesh, the Orbital could see everything and, by long and deeply held custom, chose to look at nothing unless it was asked, or unless someone was about to come to harm. Every time it did look, the glance was recorded in a ledger that the person could read whenever they liked. Most people never bothered. A few read it obsessively, in the way people in old novels had read their horoscopes. Ashu had once checked hers out of curiosity. In the previous year, the Orbital had looked at her body twice: once when she fell off a glider, and once when she had asked it whether she had eaten something unwise.
+
+"Isn't that a kind of trust?" she had said to the curator. "That it could look, and doesn't?"
+
+"The people of this room would have called it governance," said the curator. "They spent a long time trying to build it out of forms."
+
+---
+
+There had been one emergency in Ashu's lifetime that anyone remembered.
+
+Ninety years earlier, a trading ship returning from beyond the galactic rim had brought back a protein that nobody had seen before. It folded itself into new shapes when it met human tissue, and the tiny machines in people's blood did not recognise it. Within an hour, three people on the ship were unwell.
+
+The Orbital noticed in about a second and a half. In the next two seconds it modelled the protein, every one of the forty billion bodies on Pesh, and the transport routes between them. In the fourth second, it consulted the Minds of two General Systems Vehicles that happened to be passing, called *Prognosis Excellent, Bedside Manner Pending* and *Second Opinion Already Formed*. By the end of the first minute, every gland on the Orbital had received a small update telling it how to recognise the protein and take it apart.
+
+Most people learned about the outbreak the next morning, from a news summary that described it as "a minor scheduling inconvenience for the immune system". The three people on the trading ship were fine by lunchtime. One of them complained that he had missed a concert.
+
+The Museum had a display about that, too. It sat next to the display about the old pandemics, which had lasted years, and it was deliberately very small.
+
+---
+
+Ashu's daughter was born on a warm evening, on a beach at the edge of one of Pesh's inner seas, with her mother standing in the shallows looking proud.
+
+It hurt. That was part of the point. Ashu had asked the Orbital not to adjust the pain, and it had not, though she suspected it had been hovering. At one moment, very near the end, she felt the faintest shift somewhere deep in her body, like a hand steadying a ladder.
+
+"You cheated," she said afterwards, holding the baby.
+
+"Very slightly," said the Orbital. "Your blood pressure did something I didn't care for. I fixed it, and I wrote it in your ledger, which you are welcome to read. I'd like to point out that in pre-Contact terms you have just experienced an obstetric emergency, been diagnosed, treated and discharged, and all of the paperwork has been filed, and it took a fifth of a second."
+
+Ashu looked down at her daughter. "In the Museum," she said, "there's a recording of a midwife. On some old planet. Talking about a flooded road."
+
+"I know the one," said the Orbital.
+
+"I hope she'd be glad," said Ashu. "About this."
+
+The Orbital was quiet for a moment, which for a Mind was a very long time.
+
+"I think," it said, "that she is the reason any of this exists. People like her imagined it first. We only built it."
+
+---
+
+## Why I wrote this
+
+I came to the Culture novels by an unlikely route: through Elon Musk. SpaceX's drone ships, the barges its rockets land on at sea, are named after starships from the books, and curiosity about those names led me to them.
+
+What stayed with me was not the starships. It was the way the Culture treats infrastructure. The Minds look after everything, and as a result nobody in the Culture thinks about systems at all. Banks imagined a society whose machinery serves people so completely that it disappears.
+
+Nothing in the story above is plausible by today's thinking. We cannot grow back arms, edit our blood chemistry at will or model forty billion bodies in two seconds. But that is exactly why I think people who build health infrastructure should read science fiction. Our day-to-day work is necessarily practical: registries, data standards, consent rules, the slow business of getting one system to talk to another. It is easy to let the limits of today's tools become the limits of our imagination. Science fiction refuses to accept those limits. It asks what a health system would look like if the problems we spend our careers on simply did not exist, and then works backwards to the values that would still matter: trust, privacy as something given rather than taken, care that arrives before anyone has to ask for it.
+
+The real thing starts much smaller. Estonia's data exchange layer, X-Road, is described by the country's Information System Authority as a way for state agencies and the private sector to exchange data securely without centralising it, with a central server that works, in its words, like a phone book. It is a long way from a Mind that runs a world. But it is built on the same quiet idea that runs through the Culture: that the best systems are the ones people never have to think about.
+
+Reality will always be slower and messier than fiction. A rocket landing on a ship named after a novelist's joke is a reminder that the two are not as far apart as they seem.
+
+*Views are my own. The story is fiction, written in homage to the Culture novels of Iain M. Banks (1954–2013).*
+
+## Sources and further reading
+- Iain M. Banks, the Culture novels (1987–2012)
+- [RIA (Estonian Information System Authority), X-tee / X-Road](https://www.ria.ee/x-road/)
+- [Nordic Institute for Interoperability Solutions, X-Road](https://x-road.global/)

@@ -2,7 +2,7 @@
 title: "Geography as a determinant of public health"
 summary: "Iodine in the mountains, arsenic in the delta, fluoride in the rock, malaria in the forest and floods on the river. Five places where geography decides health, whatever else changes."
 topic: "Health systems"
-date: 2026-10-11
+date: 2026-10-14
 minutes: 9
 featured: false
 draft: false
@@ -70,9 +70,3 @@ The same story plays out downstream in Bangladesh's river islands (chars), and i
 Geography is the determinant we cannot change. What we can change is how well our health systems see it.
 
 *Views are my own.*
-
-## Sources
-
-- Smith, Lingas & Rahman (2000), Contamination of drinking-water by arsenic in Bangladesh: a public health emergency, Bulletin of the World Health Organization 78(9)
-- National Iodine Deficiency Disorders Control Programme, Ministry of Health and Family Welfare
-- National Center for Vector Borne Diseases Control, malaria data for Odisha

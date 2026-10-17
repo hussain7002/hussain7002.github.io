@@ -1,5 +1,5 @@
 ---
-title: "OxyChat: a chatbot for oxygen equipment, built before LLMs"
+title: "OxyHelp: a chatbot for oxygen equipment, built before LLMs"
 summary: "A multilingual WhatsApp assistant that answered biomedical engineers' and technicians' questions on medical oxygen equipment after COVID-19's second wave."
 org: "PATH"
 client: "Biomedical engineers and technicians in India's public health system"
@@ -26,9 +26,10 @@ I led the chatbot's design and rollout: the product design, the technical specif
 ## Approach
 
 - **Meet users where they already are.** Engineers were on WhatsApp, so the assistant lived there instead of in a new app.
-- **Multilingual from the start.** Questions could be asked in more than one language.
+- **Multilingual from the start.** English and 11 Indian languages, with voice questions and answers with images.
+- **Built with REAN Foundation,** with support from Google.org.
 - **Built on Google Dialogflow**, an intent-based conversational platform. This was before large language models, so every answer was designed and checked in advance.
 
 ## Outcome
 
-More than 500 engineers and technicians used OxyChat. It is no longer running, but the work behind it (scoping the questions, checking every answer, and designing for low-bandwidth, multilingual users) is the same work AI tools in health need today.
+More than 500 engineers and technicians used the OxyHelp chatbot. It is no longer running, but the work behind it (scoping the questions, checking every answer, and designing for low-bandwidth, multilingual users) is the same work AI tools in health need today.
