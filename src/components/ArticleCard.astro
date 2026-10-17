@@ -10,7 +10,9 @@ const readable = isReadable(entry);
 {readable ? (
   <a class="case rv" data-kind="article" href={`/writing/${entry.id}/`}>
     <div class={`thumb t-${tint}`}>
-      <canvas data-art={art} data-seed={entry.id} data-labels={labels} aria-hidden="true"></canvas>
+      {d.image
+        ? <img src={d.image} alt="" width="1600" height="1000" loading="lazy" decoding="async">
+        : <canvas data-art={art} data-seed={entry.id} data-labels={labels} aria-hidden="true"></canvas>}
       <span class="tag">{d.draft ? 'Draft' : 'Article'} · {d.topic}</span>
     </div>
     <div class="meta"><span>{d.topic}</span><span>{d.minutes} min read</span></div>
